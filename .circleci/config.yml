@@ -11,7 +11,8 @@ jobs:
           key: angular_bazel_example-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: bazel info release
       - run: bazel run @yarn//:yarn
-      - run: bazel build ...
+      # Workaround https://github.com/bazelbuild/bazel/issues/3645
+      - run: timeout 30 bazel build ... || (bazel shutdown; timeout 30 bazel build ... || (bazel shutdown; bazel build ...))
 
       - save_cache:
           key: angular_bazel_example-{{ .Branch }}-{{ checksum "yarn.lock" }}
