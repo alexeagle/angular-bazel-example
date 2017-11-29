@@ -56,12 +56,15 @@ jobs:
       # Helpful for debugging, so you can check you have the same bazel version when you need
       # to reproduce a failure.
       - run: bazel info release
-      
+
       # Install the dependencies from NPM
       - run: bazel run --config=ci @yarn//:yarn install
-      
-      # Build all the targets in the workspace
-      - run: bazel build --config=ci //...
+
+      # Build and Test
+      # Use bazel query so that we explicitly ask for all buildable targets to
+      # be built even though we run `bazel test`
+      # See https://github.com/bazelbuild/bazel/issues/4257
+      - run: bazel query //... | xargs bazel test --config=ci ...
 
       # If we get this far, save the node_modules directory for use next time.
       - save_cache:

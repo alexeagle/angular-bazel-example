@@ -1,9 +1,6 @@
 package(default_visibility = ["//visibility:public"])
 
-exports_files([
-    "tsconfig.json",
-    "node_modules/zone.js/dist/zone.min.js",
-])
+exports_files(["tsconfig.json"])
 
 # NOTE: this will move to node_modules/BUILD in a later release
 filegroup(
@@ -28,11 +25,40 @@ filegroup(
     ]]),
 )
 
+# TODO(alexeagle): it's messy for users to need to specify the following
+# Angular dependency lists. It should live somewhere else.
+# See https://github.com/angular/angular/issues/21048
+
 filegroup(
     name = "angular_bundles",
     srcs = [
         "//:node_modules/@angular/common/bundles/common.umd.js",
         "//:node_modules/@angular/core/bundles/core.umd.js",
         "//:node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
+    ],
+)
+
+filegroup(
+    name = "angular_test_bundles",
+    testonly = 1,
+    srcs = [
+        "//:node_modules/@angular/compiler/bundles/compiler.umd.js",
+        "//:node_modules/@angular/compiler/bundles/compiler-testing.umd.js",
+        "//:node_modules/@angular/core/bundles/core-testing.umd.js",
+        "//:node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js",
+        "//:node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js",
+        "//:node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js",
+    ],
+)
+
+filegroup(
+    name = "angular_bootstrap_scripts",
+    # do not sort
+    srcs = [
+        "//:node_modules/zone.js/dist/zone.min.js",
+        "//:node_modules/zone.js/dist/async-test.js",
+        "//:node_modules/zone.js/dist/sync-test.js",
+        "//:node_modules/zone.js/dist/proxy.min.js",
+        "//:node_modules/zone.js/dist/jasmine-patch.js",
     ],
 )

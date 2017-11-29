@@ -15,6 +15,7 @@
         "@angular/bazel": "5.1.1",
         "@angular/compiler": "5.1.1",
         "@angular/compiler-cli": "5.1.1",
+        "@angular/platform-browser-dynamic": "5.1.1",
         "@bazel/ibazel": "0.2.0",
         "@types/jasmine": "2.8.2",
         "clang-format": "1.2.1",
