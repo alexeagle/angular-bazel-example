@@ -58,6 +58,17 @@
     tsickle "0.24.x"
     typescript "2.4.x"
 
+"@bazel/typescript@bazelbuild/rules_typescript":
+  version "0.5.0"
+  resolved "https://codeload.github.com/bazelbuild/rules_typescript/tar.gz/56f4516a0047ba3564df4d7f5e499dd1f026c089"
+  dependencies:
+    "@types/node" "7.0.18"
+    "@types/source-map" "^0.5.1"
+    protobufjs "5.0.0"
+    tsickle "0.25.x"
+    tsutils "2.12.1"
+    typescript "2.5.x"
+
 "@types/node@6.0.84":
   version "6.0.84"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.84.tgz#193ffe5a9f42864d425ffd9739d95b753c6a1eab"
@@ -1034,9 +1045,24 @@ tsickle@0.24.x, tsickle@^0.24.0:
     source-map "^0.5.6"
     source-map-support "^0.4.2"
 
+tsickle@0.25.x:
+  version "0.25.5"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.25.5.tgz#2891d29f97c4aab1306e06378d8496d1765a4bfe"
+  dependencies:
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    source-map "^0.5.6"
+    source-map-support "^0.4.2"
+
 tslib@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.7.1.tgz#bc8004164691923a79fe8378bbeb3da2017538ec"
+
+tsutils@2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.12.1.tgz#f4d95ce3391c8971e46e54c4cf0edb0a21dd5b24"
+  dependencies:
+    tslib "^1.7.1"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
@@ -1051,6 +1077,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
 typescript@2.4.x, typescript@~2.4.x:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
+
+typescript@2.5.x:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.5.3.tgz#df3dcdc38f3beb800d4bc322646b04a3f6ca7f0d"
 
 uid-number@^0.0.6:
   version "0.0.6"

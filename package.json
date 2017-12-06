@@ -15,6 +15,7 @@
         "@angular/bazel": "5.0.x",
         "@angular/compiler": "5.0.x",
         "@angular/compiler-cli": "5.0.x",
+        "@bazel/typescript": "bazelbuild/rules_typescript",
         "typescript": "~2.4.x"
     },
     "scripts": {
