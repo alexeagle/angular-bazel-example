@@ -16,12 +16,15 @@
         "@angular/compiler": "5.1.0",
         "@angular/compiler-cli": "5.1.0",
         "@bazel/ibazel": "~0.1.1",
-        "@bazel/typescript": "bazelbuild/rules_typescript",
+        "@types/jasmine": "^2.8.2",
+        "concurrently": "^3.5.1",
+        "protractor": "^5.2.1",
         "requirejs": "^2.3.5",
         "typescript": "~2.5.x"
     },
     "scripts": {
-        "postinstall": "ngc -p angular.tsconfig.json",
-        "test": "bazel build ..."
+        "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
+        "pretest": "bazel build test/...",
+        "test": "concurrently \"bazel run :devserver\" protractor --kill-others --success first"
     }
 }

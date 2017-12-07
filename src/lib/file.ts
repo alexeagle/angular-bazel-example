@@ -1,1 +1,1 @@
-export const msg: string = 'monde';
+export const msg: string = 'World';
