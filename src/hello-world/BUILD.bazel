@@ -7,18 +7,18 @@ sass_binary(
     name = "hello-world-styles",
     src = "hello-world.component.scss",
     deps = [
-         "//src/shared:colors",
-         "//src/shared:fonts",
+        "//src/shared:colors",
+        "//src/shared:fonts",
     ],
 )
 
 ng_module(
-  name = "hello-world",
-  srcs = glob(["*.ts"]),
-  deps = [
-    "//src/lib",
-    "@rxjs//:rxjs",
-  ],
-  assets = [":hello-world-styles"],
-  tsconfig = "//src:tsconfig.json",
+    name = "hello-world",
+    srcs = glob(["*.ts"]),
+    assets = [":hello-world-styles"],
+    tsconfig = "//src:tsconfig.json",
+    deps = [
+        "//src/lib",
+        "@rxjs",
+    ],
 )

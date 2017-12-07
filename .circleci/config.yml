@@ -1,11 +1,29 @@
+# Settings common to each job
+anchor_1: &job_defaults
+  working_directory: ~/ng
+  docker:
+    - image: angular/ngcontainer:0.0.7
+
+# After checkout, rebase on top of master.
+# Similar to travis behavior, but not quite the same.
+# See https://discuss.circleci.com/t/1662
+anchor_2: &post_checkout
+  post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
+
 version: 2
 jobs:
-  build:
-    working_directory: ~/ng
-    docker:
-      - image: angular/ngcontainer:0.0.6
+  lint:
+    <<: *job_defaults
     steps:
-      - checkout
+      - checkout:
+          <<: *post_checkout
+      - run: buildifier -mode=check $(find . -iname BUILD.bazel -type f) || buildifier -mode=diff $(find . -iname BUILD.bazel -type f)
+
+  build:
+    <<: *job_defaults
+    steps:
+      - checkout:
+          <<: *post_checkout
 
       - restore_cache:
           key: angular_bazel_example-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -17,3 +35,9 @@ jobs:
           key: angular_bazel_example-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - "node_modules"
+workflows:
+  version: 2
+  default_workflow:
+    jobs:
+      - lint
+      - build
