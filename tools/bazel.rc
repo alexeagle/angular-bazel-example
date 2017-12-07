@@ -13,3 +13,9 @@ build --symlink_prefix=dist/
 # Workaround rules_sass still using old 'set' constructor
 # This is an error in bazel >= 0.6 unless this flag is set
 build --incompatible_disallow_set_constructor=false
+
+# Workaround https://github.com/bazelbuild/bazel/issues/3645
+# Limit Bazel to consuming 3072K of RAM
+build:ci --local_resources=3072,2.0,1.0
+
+build:ci --noshow_progress
