@@ -17,8 +17,9 @@ jobs:
     steps:
       - checkout:
           <<: *post_checkout
-      - run: buildifier -mode=diff $(find . -iname BUILD.bazel -type f)
-      - run: buildifier -mode=check $(find . -iname BUILD.bazel -type f)
+      - run: 'buildifier -mode=check $(find . -type f \( -name BUILD.bazel -or -name BUILD \)) ||
+              (echo "BUILD files not formatted. Please run ''yarn buildifier''" ; exit 1)'
+
 
   build:
     <<: *job_defaults

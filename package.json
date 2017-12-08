@@ -23,6 +23,7 @@
         "typescript": "~2.5.x"
     },
     "scripts": {
+        "buildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier && find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/buildifier",
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
         "pretest": "bazel build test/...",
         "test": "concurrently \"bazel run :devserver\" protractor --kill-others --success first"

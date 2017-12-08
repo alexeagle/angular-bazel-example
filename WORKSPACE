@@ -39,6 +39,13 @@ load("@io_bazel_rules_sass//sass:sass.bzl", "sass_repositories")
 
 sass_repositories()
 
+git_repository(
+    name = "com_github_bazelbuild_buildtools",
+    remote = "https://github.com/bazelbuild/buildtools.git",
+    # Note, this commit matches the version of buildifier in angular/ngcontainer
+    commit = "b3b620e8bcff18ed3378cd3f35ebeb7016d71f71",
+)
+
 http_archive(
     name = "io_bazel_rules_go",
     url = "https://github.com/bazelbuild/rules_go/releases/download/0.7.1/rules_go-0.7.1.tar.gz",
