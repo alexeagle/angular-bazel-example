@@ -21,7 +21,7 @@
         "concurrently": "3.5.1",
         "husky": "0.14.3",
         "protractor": "5.2.2",
-        "typescript": "2.5.3"
+        "typescript": "2.6.2"
     },
     "scripts": {
         "buildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier && find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/buildifier",
