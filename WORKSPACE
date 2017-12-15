@@ -15,9 +15,9 @@ git_repository(
     tag = "0.7.1",
 )
 
-load("@build_bazel_rules_typescript//:defs.bzl", "ts_repositories")
+load("@build_bazel_rules_typescript//:setup.bzl", "ts_setup_workspace")
 
-ts_repositories()
+ts_setup_workspace()
 
 local_repository(
     name = "angular",
