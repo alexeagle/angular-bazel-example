@@ -40,7 +40,9 @@ jobs:
 
       - run: bazel info release
       - run: bazel run --config=ci @yarn//:yarn
-      - run: bazel build --config=ci ...
+      # Use bazel query so that we explicitly ask for all buildable targets to be built as well
+      # See https://github.com/bazelbuild/bazel/issues/4257
+      - run: bazel query //... | xargs bazel test --config=ci ...
 
       - save_cache:
           key: *cache_key
