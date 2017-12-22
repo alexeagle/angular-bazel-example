@@ -21,8 +21,13 @@
         "clang-format": "1.2.1",
         "concurrently": "3.5.1",
         "husky": "0.14.3",
+        "lite-server": "2.3.x",
         "protractor": "5.2.2",
-        "typescript": "2.6.2"
+        "rollup": "0.52.3",
+        "rollup-plugin-commonjs": "8.2.6",
+        "rollup-plugin-node-resolve": "3.0.0",
+        "typescript": "2.6.2",
+        "uglify-js": "3.2.2"
     },
     "scripts": {
         "buildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier && find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/buildifier",
@@ -30,6 +35,8 @@
         "precommit": "check-clang-format \"yarn format\"",
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
         "pretest": "bazel build test/...",
-        "test": "concurrently \"bazel run //src:devserver\" protractor --kill-others --success first"
+        "test": "concurrently \"bazel run //src:devserver\" protractor --kill-others --success first",
+        "rollup": "bazel build //src:bundle",
+        "lite": "lite-server"
     }
 }

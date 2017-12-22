@@ -45,3 +45,42 @@ Production bundling with https://github.com/bazelbuild/rules_closure/ is
 underway, should be available Dec 2017 or Jan 2018
 
 Code-splitting and lazy loading are planned for Q1 2018
+
+Experimental Production bundling with Rollup:
+
+```
+npm run rollup
+```
+
+Test the bundled rollup application by running npm run lite
+
+Run it under docker:
+
+```
+$ bazel run src:nodejs_image -- --norun
+$ docker run --rm -p 3000:3000 -p 3001:3001 bazel/src:nodejs_image
+```
+
+Deploy to production:
+```
+# Install gcloud and kubectl
+# Do the auth dance:
+# https://github.com/bazelbuild/rules_docker#authorization
+# Note: I had to build docker-credential-gcr from source because gcloud broke it
+bazel run :deploy.replace
+```
+
+tips:
+```
+# Run the binary without docker
+$ bazel run src:nodejs_image.binary
+
+# What's in the image?
+$ bazel build src:nodejs_image && file-roller dist/bin/src/nodejs_image-layer.tar
+
+# Tear down all running docker containers
+$ docker rm -f $(docker ps -aq)
+
+# Hop into the running image on kubernetes
+$ kubectl exec angular-bazel-example-prod-3285254973-ncv3g  -it -- /bin/bash
+```
