@@ -9,7 +9,7 @@
         "@angular/core": "5.1.2",
         "@angular/platform-browser": "5.1.2",
         "rxjs": "5.5.6",
-        "zone.js": "0.8.18"
+        "zone.js": "0.8.19"
     },
     "devDependencies": {
         "@angular/bazel": "5.1.2",
