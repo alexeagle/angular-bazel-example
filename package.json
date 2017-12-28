@@ -17,7 +17,7 @@
         "@angular/compiler-cli": "5.1.2",
         "@angular/platform-browser-dynamic": "5.1.2",
         "@bazel/ibazel": "0.2.0",
-        "@types/jasmine": "2.8.2",
+        "@types/jasmine": "2.8.3",
         "clang-format": "1.2.1",
         "concurrently": "3.5.1",
         "husky": "0.14.3",
