@@ -66,8 +66,8 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.84.tgz#193ffe5a9f42864d425ffd9739d95b753c6a1eab"
 
 "@types/node@^6.0.46":
-  version "6.0.95"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.95.tgz#0d027612a77c55b84497ff90a4a7d597e5ac0fab"
+  version "6.0.96"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.96.tgz#7bf0bf40d6ce51e93762cc47d010c8cc5ebb2179"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -312,9 +312,9 @@ ci-info@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.1.2.tgz#03561259db48d0474c8bdc90f5b47b068b6bbfb4"
 
-clang-format@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/clang-format/-/clang-format-1.2.1.tgz#518564d5f0b6f05766e7b241e0201b3209e28eac"
+clang-format@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/clang-format/-/clang-format-1.2.2.tgz#a7277a03fce9aa4e387ddaa83b60d99dab115737"
   dependencies:
     async "^1.5.2"
     glob "^7.0.0"
