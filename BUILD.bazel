@@ -53,6 +53,15 @@ filegroup(
     srcs = glob(ANGULAR_TESTING),
 )
 
+# For serving the AngularFire2 bundles from the devserver.
+filegroup(
+    name = "angularfire2_bundles",
+    srcs = [
+        "//:node_modules/angularfire2/bundles/core.umd.js",
+        "//:node_modules/angularfire2/bundles/firestore.umd.js",
+    ]
+)
+
 filegroup(
     name = "angular_bootstrap_scripts",
     # do not sort
