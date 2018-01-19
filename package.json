@@ -26,7 +26,7 @@
     },
     "scripts": {
         "prebuildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier",
-        "buildifier": "find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/buildifier",
+        "buildifier": "find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(find $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier -name \"buildifier\" -type f)",
         "format": "git-clang-format",
         "precommit": "check-clang-format \"yarn format\"",
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
