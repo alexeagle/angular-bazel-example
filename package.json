@@ -21,7 +21,7 @@
         "clang-format": "1.2.2",
         "concurrently": "3.5.1",
         "husky": "0.14.3",
-        "lite-server": "^2.3.0",
+        "lite-server": "2.3.0",
         "protractor": "5.2.2",
         "typescript": "2.6.2"
     },

@@ -1319,7 +1319,7 @@ limiter@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.2.tgz#229d8055891c8b11af9e0ee5200e8e09bb3dcbeb"
 
-lite-server@^2.3.0:
+lite-server@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/lite-server/-/lite-server-2.3.0.tgz#5b4cc8f5d5fd4836105480ab2ac48a3a0de2b0c8"
   dependencies:
