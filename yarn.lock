@@ -14,6 +14,12 @@
   dependencies:
     "@types/node" "6.0.84"
 
+"@angular/cdk@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-5.1.0.tgz#e04547609d96d8b6fe0dac17bed323760c3952e9"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/common@5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.2.0.tgz#d184fb90763da1d1bab1f6c4f41dd80c79e47506"
@@ -38,6 +44,18 @@
 "@angular/core@5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.2.0.tgz#f91bf83de3e0defd621adcc007c25d7cd5a85af1"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/forms@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-5.2.1.tgz#530f1249bc71d9560297be642d55a5a6c439d920"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/material@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-5.1.0.tgz#038803b6a52e484c6bf9bb413714795952d61d49"
   dependencies:
     tslib "^1.7.1"
 
