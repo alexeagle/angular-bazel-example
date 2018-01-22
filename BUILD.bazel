@@ -18,6 +18,7 @@ filegroup(
         "tsutils",
         "typescript",
         "@types",
+        "angularfire2",
     ] for ext in [
         "*.js",
         "*.json",
