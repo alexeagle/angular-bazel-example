@@ -14,6 +14,7 @@ filegroup(
         ext,
     ]) for pkg in [
         "@angular",
+        "protractor",
         "tsickle",
         "tsutils",
         "typescript",
