@@ -1,7 +1,5 @@
 package(default_visibility = ["//visibility:public"])
 
-exports_files(["tsconfig.json"])
-
 # NOTE: this will move to node_modules/BUILD in a later release
 filegroup(
     name = "node_modules",
@@ -25,6 +23,7 @@ filegroup(
         "*.d.ts",
     ]] + [
         "node_modules/http-server/**",
+        "node_modules/d3/build/*",
     ]),
 )
 
@@ -65,5 +64,12 @@ filegroup(
         "//:node_modules/zone.js/dist/sync-test.js",
         "//:node_modules/zone.js/dist/proxy.min.js",
         "//:node_modules/zone.js/dist/jasmine-patch.js",
+    ],
+)
+
+filegroup(
+    name = "vendor_scripts",
+    srcs = [
+        "//:node_modules/d3/build/d3.min.js",
     ],
 )

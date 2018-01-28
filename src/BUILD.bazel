@@ -18,6 +18,13 @@ genrule(
     cmd = "cp $< $@",
 )
 
+genrule(
+    name = "d3.js",
+    srcs = ["//:node_modules/d3/build/d3.min.js"],
+    outs = ["d3.min.js"],
+    cmd = "cp $< $@",
+)
+
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_devserver")
 
 ts_devserver(
@@ -27,6 +34,7 @@ ts_devserver(
     serving_path = "/bundle.min.js",
     static_files = [
         ":zone.js",
+        ":d3.js",
         "index.html",
     ],
     deps = ["//src"],

@@ -10,3 +10,9 @@ html {
     }
   }
 }
+
+.d3-chart-container {
+  overflow-x: hidden;
+  width: 500px;
+  height: 500px;
+}
