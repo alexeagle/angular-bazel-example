@@ -60,8 +60,8 @@ nodejs_binary(
     data = [
         "index.html",
         ":bundle",
-        ":zone.js",
         ":d3.js",
+        ":zone.js",
     ],
     entry_point = "http-server/bin/http-server",
 )
