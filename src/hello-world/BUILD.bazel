@@ -19,9 +19,13 @@ ng_module(
         "hello-world.component.ts",
         "hello-world.module.ts",
     ],
-    assets = [":hello-world-styles"],
+    assets = [
+        ":hello-world-styles",
+        ":hello-world.component.html",
+    ],
     tsconfig = "//src:tsconfig.json",
     deps = [
+        "//src:typings",
         "//src/lib",
         "@rxjs",
     ],
@@ -36,7 +40,10 @@ ts_library(
 
 ts_web_test(
     name = "test",
-    bootstrap = ["//:angular_bootstrap_scripts"],
+    bootstrap = [
+        "//:angular_bootstrap_scripts",
+        "//:vendor_scripts",
+    ],
     deps = [
         ":test_lib",
         "//:angular_bundles",

@@ -1,6 +1,12 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@angular//:index.bzl", "ng_module")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+ts_library(
+    name = "typings",
+    srcs = ["typings.d.ts"],
+)
 
 ng_module(
     name = "src",
@@ -18,6 +24,13 @@ genrule(
     cmd = "cp $< $@",
 )
 
+genrule(
+    name = "d3.js",
+    srcs = ["//:node_modules/d3/build/d3.min.js"],
+    outs = ["d3.min.js"],
+    cmd = "cp $< $@",
+)
+
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_devserver")
 
 ts_devserver(
@@ -27,6 +40,7 @@ ts_devserver(
     serving_path = "/bundle.min.js",
     static_files = [
         ":zone.js",
+        ":d3.js",
         "index.html",
     ],
     deps = ["//src"],
@@ -46,6 +60,7 @@ nodejs_binary(
     data = [
         "index.html",
         ":bundle",
+        ":d3.js",
         ":zone.js",
     ],
     entry_point = "http-server/bin/http-server",
