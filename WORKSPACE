@@ -3,7 +3,7 @@ workspace(name = "angular_bazel_example")
 git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
-    tag = "0.4.0",
+    commit = "7d4e13a7d1bbc5eded35df631338e9f0719a1737",
 )
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories")
