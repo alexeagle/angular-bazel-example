@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@angular/animations@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.3.tgz#e0eb8d55f807e799df128af9150c075c9ab82adf"
+"@angular/animations@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.4.tgz#c5ec749d84a0434733a28a82c6cb6a4e15246201"
   dependencies:
     tslib "^1.7.1"
 
@@ -14,42 +14,42 @@
   dependencies:
     "@types/node" "6.0.84"
 
-"@angular/common@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.2.3.tgz#f2a5c12ec44b73a248d8dcb2d37ac2749f091cf7"
+"@angular/common@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.2.4.tgz#a0ee6ef65f731196d3037bce515f7bbec90740d2"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/compiler-cli@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-5.2.3.tgz#75b39a346f1b2a95ebc403016d19fc33d5315221"
+"@angular/compiler-cli@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-5.2.4.tgz#6d236f8433abe6752441e20884e599e8aa13c567"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
     tsickle "^0.26.0"
 
-"@angular/compiler@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-5.2.3.tgz#49167adb35bdb5e7e915cce912c432300fc16816"
+"@angular/compiler@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-5.2.4.tgz#f653176bf6c4e253b2c445a1e50941ffba009fb2"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/core@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.2.3.tgz#157dcb437d085b325513689e0e4ae70182f3f708"
+"@angular/core@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.2.4.tgz#44a59bcea87b3aac9ce8ff2ff674fe9cb60e2041"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.3.tgz#87d5172da2c102c3cf48da29d39e9b4b9414b419"
+"@angular/platform-browser-dynamic@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.4.tgz#708457c9aafb1b812187c95d10365685521314d4"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-5.2.3.tgz#953df896839879e2b8ca89a364d66e3ac1dcd167"
+"@angular/platform-browser@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-5.2.4.tgz#dcb2dc6083774dcf2e17c9e9d0653d87057bf732"
   dependencies:
     tslib "^1.7.1"
 
@@ -75,8 +75,8 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.84.tgz#193ffe5a9f42864d425ffd9739d95b753c6a1eab"
 
 "@types/node@^6.0.46":
-  version "6.0.96"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.96.tgz#7bf0bf40d6ce51e93762cc47d010c8cc5ebb2179"
+  version "6.0.97"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.97.tgz#72199848e8f3cfa975864031ac12e0ef6ccfe054"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -487,8 +487,8 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
 
 ecstatic@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/ecstatic/-/ecstatic-3.1.1.tgz#2564aa9dde84179dcaf926a9e6d12df13a0b666d"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ecstatic/-/ecstatic-3.2.0.tgz#1b1aee1ca7c6b99cfb5cf6c9b26b481b90c4409f"
   dependencies:
     he "^1.1.1"
     mime "^1.4.1"
@@ -1038,8 +1038,8 @@ lie@~3.1.0:
     immediate "~3.0.5"
 
 lodash@^4.5.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
 micromatch@^2.1.5:
   version "2.3.11"
