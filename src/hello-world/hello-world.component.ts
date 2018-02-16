@@ -6,6 +6,7 @@ import {msg} from '../lib/file';
   template: `
     <div>Hello {{ name }}</div>
     <input type="text" [value]="name" (input)="name = $event.target.value"/>
+    hhheellllooo
   `,
   styleUrls: ['./hello-world-styles.css']
 })
