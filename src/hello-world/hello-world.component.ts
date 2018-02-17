@@ -37,6 +37,7 @@ import {msg} from '../lib/file';
     1234567890
     1234567890
     1234567890
+    1234567890
   `,
   styleUrls: ['./hello-world-styles.css']
 })
