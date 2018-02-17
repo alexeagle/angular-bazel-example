@@ -64,7 +64,7 @@ Control-C twice to kill the devserver and also stop `ibazel`.
 We can also run all the unit tests:
 
 ```bash
-$ ibazel test ...
+$ ibazel test //...
 ```
 
 This will run all the tests. In this example, there is a test for the
