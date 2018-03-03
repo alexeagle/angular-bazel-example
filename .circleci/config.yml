@@ -33,17 +33,6 @@ version: 2
 
 # These jobs will run in parallel, and report separate statuses to GitHub PRs
 jobs:
-  lint:
-    <<: *job_defaults
-    steps:
-      - checkout:
-          <<: *post_checkout
-      # Enforce that BUILD files are formatted. Note that this uses the version of buildifier
-      # from the docker image above - take care that you use the same version when you run
-      # buildifier locally on your change.
-      - run: 'buildifier -mode=check $(find . -type f \( -name BUILD.bazel -or -name BUILD \)) ||
-              (echo "BUILD files not formatted. Please run ''yarn buildifier''" ; exit 1)'
-
   build:
     <<: *job_defaults
     steps:
@@ -53,29 +42,9 @@ jobs:
       - restore_cache:
           key: *cache_key
 
-      # Helpful for debugging, so you can check you have the same bazel version when you need
-      # to reproduce a failure.
-      - run: bazel info release
-
-      # Install the dependencies from NPM
-      - run: bazel run --config=ci @yarn//:yarn install
-
-      # Build and Test
-      # Use bazel query so that we explicitly ask for all buildable targets to
-      # be built even though we run `bazel test`
-      # See https://github.com/bazelbuild/bazel/issues/4257
-      - run: bazel query //... | xargs bazel test --config=ci
-
-      # Run the benchmark
-      - run: node_modules/.bin/ibazel-benchmark-runner //src:devserver src/hello-world/hello-world.component.ts --config=ci --url=http://localhost:5432
-
-      # Run the protractor end-to-end test - it's not a Bazel target because
-      # we didn't write a protractor rule yet.
-      - run: xvfb-run -a yarn e2e
-      
       - store_artifacts:
-          path: dist/bin/src/bundle.min.js
-          destination: bundle.min.js
+          path: size.js
+          destination: size.js
 
       # If we get this far, save the node_modules directory for use next time.
       - save_cache:
@@ -87,5 +56,4 @@ workflows:
   version: 2
   default_workflow:
     jobs:
-      - lint
       - build
