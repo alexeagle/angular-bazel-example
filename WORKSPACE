@@ -11,10 +11,19 @@ workspace(name = "angular_bazel_example")
 ####################################
 # The Bazel buildtools repo contains tools like the BUILD file formatter, buildifier
 http_archive(
+    name = "io_bazel",
+    sha256 = "255e1199c0876b9a8cc02d5ea569b6cfe1901d30428355817b7606ddecb04c15",
+    strip_prefix = "bazel-0.8.0",
+    urls = [
+        "http://mirror.bazel.build/github.com/bazelbuild/bazel/archive/0.8.0.tar.gz",
+        "https://github.com/bazelbuild/bazel/archive/0.8.0.tar.gz",
+    ],
+)
+
+git_repository(
     name = "com_github_bazelbuild_buildtools",
-    # Note, this commit matches the version of buildifier in angular/ngcontainer
-    url = "https://github.com/bazelbuild/buildtools/archive/b3b620e8bcff18ed3378cd3f35ebeb7016d71f71.zip",
-    sha256 = "4d8d6244320dd751590f9100cf39fd7a4b75cd901e1f3ffdfd6f048328883695",
+    remote = "https://github.com/bazelbuild/buildtools.git",
+    commit = "3802a37ab5085c2f446d2fc3575c8f0c6d5da460",
 )
 
 
