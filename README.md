@@ -25,7 +25,13 @@ you run the first build.
 
 Also add `ibazel` to your `$PATH`:
 
-`yarn global add @bazel/ibazel`
+```bash
+# yarn
+$ yarn global add @bazel/ibazel
+
+# npm 
+$ npm install -g @bazel/ibazel
+```
 
 ## Setup
 
@@ -36,7 +42,11 @@ package manager using a pinned version it manages. You should not even need
 node, npm, or yarn installed on a machine where you develop with Bazel.
 
 ```bash
+# yarn
 $ bazel run @yarn//:yarn
+
+# npm
+$ bazel run @nodejs//:npm install
 ```
 
 ## Development
