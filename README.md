@@ -23,16 +23,16 @@ you run the first build.
 
 [install]: https://bazel.build/versions/master/docs/install.html
 
-Also add `ibazel` to your `$PATH`:
+Also add `bazel` to your `$PATH`:
 
 ```
-yarn global add @bazel/ibazel
+yarn global add @bazel/bazel
 ```
 
 or
 
 ```
-npm install -g @bazel/ibazel
+npm install -g @bazel/bazel
 ```
 
 ## Setup
@@ -44,6 +44,7 @@ node, npm, or yarn installed on a machine where you develop with Bazel.
 
 ```bash
 $ bazel run :install
+$ yarn install
 ```
 
 ## Development
@@ -51,10 +52,10 @@ $ bazel run :install
 Next we'll run the development server:
 
 ```bash
-$ ibazel run src:devserver
+$ bazel run src:devserver
 ```
 
-> The `ibazel` command is a "watch mode"
+> The `bazel` command is a "watch mode"
 > for Bazel, which means it will watch any files that are inputs to the devserver,
 > and when they change it will ask Bazel to re-build them. The devserver stays
 > running, and when the re-build is finished, it will trigger the LiveReload in
@@ -66,12 +67,12 @@ one to understand and see the effect). As soon as you save a change, the app
 should refresh in the browser with the new content. Our intent is that this time
 is less than two seconds, even for a large application.
 
-Control-C twice to kill the devserver and also stop `ibazel`.
+Control-C twice to kill the devserver and also stop `bazel`.
 
 We can also run all the unit tests:
 
 ```bash
-$ ibazel test ...
+$ bazel test ...
 ```
 
 This will run all the tests. In this example, there is a test for the
@@ -86,7 +87,7 @@ requires re-optimizing the app. This example uses Rollup and Uglify, but other
 bundlers can be integrated with Bazel.
 
 ```bash
-$ ibazel run src:prodserver
+$ bazel run src:prodserver
 ```
 
 We also use Protractor to run end-to-end tests. We don't have a protractor rule
