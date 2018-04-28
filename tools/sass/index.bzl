@@ -21,6 +21,12 @@ def _sass_binary_impl(ctx):
       options += ["--load-path=%s" % prefix]
       for include_path in ctx.attr.include_paths:
         options += ["--load-path=%s%s" % (prefix, include_path)]
+    if not ctx.attr.sourcemap:
+        options += ["--no-source-map"]
+
+    outputs = [ctx.outputs.css_file]
+    if ctx.attr.sourcemap:
+        outputs += [ctx.outputs.css_map_file]
 
     ctx.actions.run(
         mnemonic = "SassCompiler",
@@ -28,19 +34,21 @@ def _sass_binary_impl(ctx):
         inputs = [ctx.executable._binary] +
             list(collect_transitive_sources([ctx.file.src], ctx.attr.deps)),
         arguments = options + [ctx.file.src.path, ctx.outputs.css_file.path],
-        outputs = [ctx.outputs.css_file],
+        outputs = outputs,
     )
 
     # Make sure the output CSS is available in runfiles if used as a data dep.
     return DefaultInfo(runfiles = ctx.runfiles(files = [ctx.outputs.css_file]))
 
-def _sass_binary_outputs(output_name, output_dir):
+def _sass_binary_outputs(output_name, output_dir, sourcemap):
   output_name = output_name or "%{name}.css"
   css_file = ("%s/%s" % (output_dir, output_name) if output_dir
               else output_name)
   outputs = {
       "css_file": css_file,
   }
+  if sourcemap:
+      outputs["css_map_file"] = css_file + ".map"
 
   return outputs
 
@@ -78,6 +86,7 @@ _sass_binary_attrs = {
             "compressed",
         ],
     ),
+    "sourcemap": attr.bool(default = True),
     "deps": sass_deps_attr,
     "_binary": attr.label(
         default = Label("//tools/sass"),
