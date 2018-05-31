@@ -36,7 +36,7 @@ ts_library(
 
 ts_web_test_suite(
     name = "test",
-    bootstrap = ["//:angular_bootstrap_scripts"],
+    bootstrap = ["//:node_modules/zone.js/dist/zone-testing-bundle.js"],
     browsers = [
         "@io_bazel_rules_webtesting//browsers:chromium-local",
         "@io_bazel_rules_webtesting//browsers:firefox-local",

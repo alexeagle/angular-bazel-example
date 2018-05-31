@@ -5,7 +5,15 @@ alias(
     actual = "@nodejs//:yarn",
 )
 
-exports_files(["tsconfig.json"])
+# This export allows targets in other packages to reference files that live
+# in this package.
+exports_files([
+    # Let ts_library targets reference the root tsconfig.json file
+    "tsconfig.json",
+    # Let devserver and testing targets reference zone.js distro
+    "node_modules/zone.js/dist/zone.min.js",
+    "node_modules/zone.js/dist/zone-testing-bundle.js",
+])
 
 # NOTE: this will move to node_modules/BUILD in a later release
 filegroup(
@@ -59,16 +67,4 @@ filegroup(
     name = "angular_test_bundles",
     testonly = 1,
     srcs = glob(ANGULAR_TESTING),
-)
-
-filegroup(
-    name = "angular_bootstrap_scripts",
-    # do not sort
-    srcs = [
-        "//:node_modules/zone.js/dist/zone.min.js",
-        "//:node_modules/zone.js/dist/async-test.js",
-        "//:node_modules/zone.js/dist/sync-test.js",
-        "//:node_modules/zone.js/dist/proxy.min.js",
-        "//:node_modules/zone.js/dist/jasmine-patch.js",
-    ],
 )
