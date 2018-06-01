@@ -18,7 +18,7 @@
         "@angular/platform-browser-dynamic": "6.0.3",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/ibazel": "0.3.1",
-        "@types/jasmine": "2.8.7",
+        "@types/jasmine": "2.8.8",
         "clang-format": "1.2.3",
         "concurrently": "3.5.1",
         "http-server": "0.11.1",
