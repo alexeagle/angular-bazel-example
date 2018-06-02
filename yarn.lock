@@ -70,6 +70,10 @@
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
 
+"@bazel/ibazel@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.4.0.tgz#e3e5c8e5b6b36c4d72952da405e6ee4f63545a15"
+
 "@bazel/typescript@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.11.1.tgz#54409d6ed1f43e71fce047fb4e229f9cc8a5ff68"
