@@ -77,7 +77,7 @@ local_repository(
 ####################################
 # Load and install our dependencies downloaded above.
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories")
+load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "yarn_install")
 
 node_repositories(package_json = ["//:package.json"])
 
@@ -101,3 +101,12 @@ ts_setup_workspace()
 load("@io_bazel_rules_sass//sass:sass.bzl", "sass_repositories")
 
 sass_repositories()
+
+####################################
+# Setup our local toolchain
+
+yarn_install(
+    name = "history-server_runtime_deps",
+    package_json = "//tools/history-server:package.json",
+    yarn_lock = "//tools/history-server:yarn.lock",
+)

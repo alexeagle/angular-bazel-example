@@ -37,9 +37,7 @@ filegroup(
         "*.js",
         "*.json",
         "*.d.ts",
-    ]] + [
-        "node_modules/history-server/**",
-    ]),
+    ]]),
 )
 
 ANGULAR_TESTING = [
