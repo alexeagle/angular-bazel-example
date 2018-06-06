@@ -4,8 +4,11 @@ import {Observable} from 'rxjs';
 
 import {ADD_TODO, DELETE_TODO, TOGGLE_DONE, UPDATE_TODO} from '../reducers/reducers';
 
-@Component(
-    {selector: 'todos', templateUrl: './todos.component.html', styleUrls: ['./todos-styles.css']})
+@Component({
+  selector: 'todos',
+  templateUrl: './todos.component.html',
+  styleUrls: ['./todos.component.css']
+})
 export class TodosComponent implements OnInit {
   todos$: Observable<any>;
   todo: string;
