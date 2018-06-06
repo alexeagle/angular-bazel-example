@@ -18,9 +18,9 @@
     protobufjs "5.0.0"
     shelljs "0.7.8"
 
-"@angular/common@6.0.4":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-6.0.4.tgz#e3d194a1bb1e143044774488d610437a982179fa"
+"@angular/common@6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-6.0.3.tgz#8b2af3bb74add35c10cd969a5d179cb6a8b21545"
   dependencies:
     tslib "^1.9.0"
 
