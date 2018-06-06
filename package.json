@@ -4,7 +4,7 @@
     "description": "Demo of bazel rules for angular",
     "license": "Apache 2.0",
     "dependencies": {
-        "@angular/animations": "6.0.4",
+        "@angular/animations": "6.0.3",
         "@angular/common": "6.0.4",
         "@angular/core": "6.0.4",
         "@angular/forms": "6.0.4",
