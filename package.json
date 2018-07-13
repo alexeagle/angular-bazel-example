@@ -12,7 +12,7 @@
         "@angular/router": "6.0.4",
         "@angular/upgrade": "6.0.4",
         "@ngrx/store": "6.0.1",
-        "rxjs": "6.2.1",
+        "rxjs": "6.2.2",
         "zone.js": "0.8.26"
     },
     "devDependencies": {
