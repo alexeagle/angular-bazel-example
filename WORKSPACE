@@ -35,17 +35,19 @@ http_archive(
 # Runs the TypeScript compiler
 http_archive(
     name = "build_bazel_rules_typescript",
-    url = "https://github.com/bazelbuild/rules_typescript/archive/0.15.0.zip",
-    strip_prefix = "rules_typescript-0.15.0",
-    sha256 = "1aa75917330b820cb239b3c10a936a10f0a46fe215063d4492dd76dc6e1616f4",
+    url = "https://github.com/bazelbuild/rules_typescript/archive/0.15.3.zip",
+    strip_prefix = "rules_typescript-0.15.3",
+    sha256 = "a2b26ac3fc13036011196063db1bf7f1eae81334449201dc28087ebfa3708c99",
 )
 
 # Used by the ts_web_test_suite rule to provision browsers
 http_archive(
     name = "io_bazel_rules_webtesting",
-    url = "https://github.com/bazelbuild/rules_webtesting/archive/v0.2.0.zip",
-    strip_prefix = "rules_webtesting-0.2.0",
-    sha256 = "cecc12f07e95740750a40d38e8b14b76fefa1551bef9332cb432d564d693723c",
+    # Use a commit SHA because we need a release
+    # https://github.com/bazelbuild/rules_webtesting/issues/273
+    url = "https://github.com/bazelbuild/rules_webtesting/archive/bbfc846d98dacb0fb40dd9173acfe4070e3e0f62.zip",
+    strip_prefix = "rules_webtesting-bbfc846d98dacb0fb40dd9173acfe4070e3e0f62",
+    sha256 = "a79e2d681b7c9ddc51e7974ddb385b9ee2b389cdc823dd3e78e18936337e4c5a",
 )
 
 # Runs the Sass CSS preprocessor
