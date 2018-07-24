@@ -24,7 +24,7 @@
         "@bazel/ibazel": "0.4.0",
         "@types/jasmine": "2.8.8",
         "clang-format": "1.2.3",
-        "concurrently": "3.6.0",
+        "concurrently": "3.6.1",
         "husky": "0.14.3",
         "protractor": "5.4.0",
         "typescript": "2.7.2"
