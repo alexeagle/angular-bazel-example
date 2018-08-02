@@ -96,9 +96,9 @@
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.15.0.tgz#bd588b8b9fcc5763c3f14787fdb29ba4e127258d"
 
-"@ngrx/store@6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.0.1.tgz#02c806ce20c698b997e81f5671e0edc07d32cf86"
+"@ngrx/store@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.1.0.tgz#5b027647a797bf027912568214b10375dd75af38"
 
 "@types/events@*":
   version "1.2.0"
