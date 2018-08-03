@@ -14,9 +14,16 @@ workspace(name = "angular_bazel_example")
 # Allows Bazel to run tooling in Node.js
 http_archive(
     name = "build_bazel_rules_nodejs",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/archive/0.10.0.zip"],
-    strip_prefix = "rules_nodejs-0.10.0",
-    sha256 = "2f77623311da8b5009b1c7eade12de8e15fa3cd2adf9dfcc9f87cb2082b2211f",
+    url = "https://github.com/gregmagolan/rules_nodejs/archive/519b15b7bd5e0177e6f4ba0f6e58e9b18c17dd18.zip",
+    strip_prefix = "rules_nodejs-519b15b7bd5e0177e6f4ba0f6e58e9b18c17dd18",
+    sha256 = "c7f67af525e5b4540dd83f98960a05943c1924928e56eb681477a615f2ae3afd",
+)
+
+http_archive(
+    name = "bazel_skylib",
+    url = "https://github.com/bazelbuild/bazel-skylib/archive/0.3.1.zip",
+    strip_prefix = "bazel-skylib-0.3.1",
+    sha256 = "95518adafc9a2b656667bbf517a952e54ce7f350779d0dd95133db4eb5c27fb1",
 )
 
 # The Bazel buildtools repo contains tools like the BUILD file formatter, buildifier

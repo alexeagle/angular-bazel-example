@@ -10,7 +10,8 @@ alias(
 exports_files([
     # Let ts_library targets reference the root tsconfig.json file
     "tsconfig.json",
-    # Let devserver and testing targets reference zone.js distro
+    # Let devserver and testing targets reference systemjs & zone.js distros
+    "node_modules/systemjs/dist/system.js",
     "node_modules/zone.js/dist/zone.min.js",
     "node_modules/zone.js/dist/zone-testing-bundle.js",
 ])
