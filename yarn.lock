@@ -40,12 +40,12 @@
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.4.0.tgz#e3e5c8e5b6b36c4d72952da405e6ee4f63545a15"
 
-"@bazel/typescript@0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.16.0.tgz#020b44998c851131d631eab18783f53ed7e6e826"
+"@bazel/typescript@0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.16.1.tgz#5a5d145a17898bfadae8268cf942815424119412"
   dependencies:
     protobufjs "5.0.0"
-    tsickle "0.25.x"
+    tsickle "0.32.1"
     tsutils "2.20.0"
 
 "@ngrx/store@6.1.0":
@@ -1370,18 +1370,18 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-source-map-support@^0.4.2, source-map-support@~0.4.0:
-  version "0.4.18"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
-  dependencies:
-    source-map "^0.5.6"
-
 source-map-support@^0.5.0:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.6.tgz#4435cee46b1aab62b8e8610ce60f788091c51c13"
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
+
+source-map-support@~0.4.0:
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
+  dependencies:
+    source-map "^0.5.6"
 
 source-map@^0.5.6:
   version "0.5.7"
@@ -1493,15 +1493,6 @@ tough-cookie@~2.3.3:
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
   dependencies:
     punycode "^1.4.1"
-
-tsickle@0.25.x:
-  version "0.25.6"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.25.6.tgz#b595db16b236721824eeeda8bb262365b47ef334"
-  dependencies:
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map "^0.5.6"
-    source-map-support "^0.4.2"
 
 tsickle@0.32.1, tsickle@^0.32.1:
   version "0.32.1"
