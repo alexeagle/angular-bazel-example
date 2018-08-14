@@ -7,26 +7,6 @@
 # imports also make sense when referencing the published package.
 workspace(name = "angular_bazel_example")
 
-####################################
-# Fetch external repositories containing Bazel build toolchain support.
-# Bazel doesn't support transitive WORKSPACE deps, so we must install those too.
-
-# Allows Bazel to run tooling in Node.js
-http_archive(
-    name = "build_bazel_rules_nodejs",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/archive/0.11.3.zip"],
-    strip_prefix = "rules_nodejs-0.11.3",
-    sha256 = "e8842fa5f5e38f2c826167ff94323d4b5aabd13217cee867d971d6f860cfd730"
-)
-
-# build_bazel_rules_nodejs depends on skylib
-http_archive(
-    name = "bazel_skylib",
-    urls = ["https://github.com/bazelbuild/bazel-skylib/archive/0.3.1.zip"],
-    strip_prefix = "bazel-skylib-0.3.1",
-    sha256 = "95518adafc9a2b656667bbf517a952e54ce7f350779d0dd95133db4eb5c27fb1",
-)
-
 # The Bazel buildtools repo contains tools like the BUILD file formatter, buildifier
 # This commit matches the version of buildifier in angular/ngcontainer
 # If you change this, also check if it matches the version in the angular/ngcontainer
@@ -46,42 +26,15 @@ local_repository(
     path = "node_modules/@bazel/typescript",
 )
 
-# build_bazel_rules_typescript depends on io_bazel_skydoc
-http_archive(
-    name = "io_bazel_skydoc",
-    urls = ["https://github.com/bazelbuild/skydoc/archive/0ef7695c9d70084946a3e99b89ad5a99ede79580.zip"],
-    strip_prefix = "skydoc-0ef7695c9d70084946a3e99b89ad5a99ede79580",
-    sha256 = "491f9e142b870b18a0ec8eb3d66636eeceabe5f0c73025706c86f91a1a2acb4d",
-)
-
-# Used by the ts_web_test_suite rule to provision browsers
-http_archive(
-    name = "io_bazel_rules_webtesting",
-    url = "https://github.com/bazelbuild/rules_webtesting/archive/0.2.1.zip",
-    strip_prefix = "rules_webtesting-0.2.1",
-    sha256 = "7d490aadff9b5262e5251fa69427ab2ffd1548422467cb9f9e1d110e2c36f0fa",
-)
-
-# bazel_gazelle is a transitive dep of rules_typescript and rules_webtesting
-http_archive(
-    name = "bazel_gazelle",
-    urls = ["https://github.com/bazelbuild/bazel-gazelle/releases/download/0.13.0/bazel-gazelle-0.13.0.tar.gz"],
-    sha256 = "bc653d3e058964a5a26dcad02b6c72d7d63e6bb88d94704990b908a1445b8758",
-)
+load("@build_bazel_rules_typescript//:package.bzl", "rules_typescript_dependencies")
+rules_typescript_dependencies()
 
 # Runs the Sass CSS preprocessor
 http_archive(
     name = "io_bazel_rules_sass",
-    url = "https://github.com/bazelbuild/rules_sass/archive/0.1.0.zip",
-    strip_prefix = "rules_sass-0.1.0",
-    sha256 = "b243c4d64f054c174051785862ab079050d90b37a1cef7da93821c6981cb9ad4",
-)
-
-# Some of the TypeScript tooling is written in Go.
-http_archive(
-    name = "io_bazel_rules_go",
-    url = "https://github.com/bazelbuild/rules_go/releases/download/0.14.0/rules_go-0.14.0.tar.gz",
-    sha256 = "5756a4ad75b3703eb68249d50e23f5d64eaf1593e886b9aa931aa6e938c4e301",
+    url = "https://github.com/bazelbuild/rules_sass/archive/1.11.0.zip",
+    strip_prefix = "rules_sass-1.11.0",
+    sha256 = "dbe9fb97d5a7833b2a733eebc78c9c1e3880f676ac8af16e58ccf2139cbcad03",
 )
 
 # The @angular repo contains rule for building Angular applications
