@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@angular/compiler-cli@6.1.2":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-6.1.2.tgz#00829df848210a8a06c3641428f36525fdf41e53"
+"@angular/compiler-cli@6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-6.1.3.tgz#f8454d140b875454a9e58944a008ee2592638700"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
     tsickle "^0.32.1"
 
-"@angular/compiler@6.1.2":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.1.2.tgz#56fada04cb7dc77a5d3f0b786be713130293d468"
+"@angular/compiler@6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.1.3.tgz#a02efd29e70bb7d1230ca877f9c720518bdf364c"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@6.1.2":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-6.1.2.tgz#412dd32a91ec1d5d6db508babbb36e9799235d8d"
+"@angular/core@6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-6.1.3.tgz#6561ba0b40a12758e5237fc05186b56d6d0bdbc9"
   dependencies:
     tslib "^1.9.0"
 
