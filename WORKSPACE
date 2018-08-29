@@ -20,6 +20,13 @@ http_archive(
     sha256 = "edb24c2f9c55b10a820ec74db0564415c0cf553fa55e9fc709a6332fb6685eff",
 )
 
+http_archive(
+    name = "build_bazel_rules_nodejs",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/archive/0.12.2.zip"],
+    strip_prefix = "rules_nodejs-0.12.2",
+    sha256 = "b691443ee5877214bfce3b006204528ef92ee57c2c5d21aec6a757bc6f58a7b8",
+)
+
 # Runs the TypeScript compiler
 local_repository(
     name = "build_bazel_rules_typescript",
@@ -92,12 +99,3 @@ sass_repositories()
 load("@angular//:index.bzl", "ng_setup_workspace")
 
 ng_setup_workspace()
-
-####################################
-# Setup our local toolchain
-
-yarn_install(
-    name = "history-server_runtime_deps",
-    package_json = "//tools/history-server:package.json",
-    yarn_lock = "//tools/history-server:yarn.lock",
-)

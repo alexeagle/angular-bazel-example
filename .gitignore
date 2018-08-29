@@ -1,4 +1,3 @@
 node_modules
 bazel-out
-.bazelrc
 dist

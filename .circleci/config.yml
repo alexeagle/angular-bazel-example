@@ -65,14 +65,11 @@ jobs:
       - run: yarn
 
       # Build and Test
-      # Use bazel query so that we explicitly ask for all buildable targets to
-      # be built even though we run `bazel test`
-      # See https://github.com/bazelbuild/bazel/issues/4257
-      - run: bazel query //... | xargs bazel test
+      - run: bazel test //...
 
       # Run the benchmark
       - run: node_modules/.bin/ibazel-benchmark-runner //src:devserver src/hello-world/hello-world.component.ts --url=http://localhost:5432
-      
+
       - store_artifacts:
           path: dist/bin/src/bundle.min.js
           destination: bundle.min.js

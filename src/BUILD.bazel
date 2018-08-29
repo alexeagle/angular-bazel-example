@@ -57,7 +57,7 @@ genrule(
     cmd = "cp $< $@",
 )
 
-load("//tools/history-server:index.bzl", "history_server")
+load("@build_bazel_rules_nodejs//:defs.bzl", "history_server")
 
 history_server(
     name = "prodserver",
