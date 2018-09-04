@@ -5,7 +5,7 @@
     "license": "Apache 2.0",
     "dependencies": {
         "@ngrx/store": "6.1.0",
-        "rxjs": "6.3.0",
+        "rxjs": "6.3.2",
         "tslib": "1.9.3",
         "zone.js": "0.8.26"
     },
