@@ -21,7 +21,7 @@
         "@types/node": "6.0.117",
         "clang-format": "1.2.4",
         "husky": "0.14.3",
-        "protractor": "5.4.0",
+        "protractor": "5.4.1",
         "typescript": "2.9.2"
     },
     "scripts": {
