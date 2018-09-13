@@ -23,26 +23,29 @@ exports_files([
 ])
 
 filegroup(
-    name = "node_modules",
-    srcs = glob(
-        [
-            # Include only .js, .json & .d.ts files to reduce the number of
-            # files in the //:node_modules filegroup
-            "node_modules/**/*.js",
-            "node_modules/**/*.json",
-            "node_modules/**/*.d.ts",
-            # All the files in the protractor package are necesssary
-            "node_modules/protractor/**",
-            # Also include all files in node_modules/.bin
-            "node_modules/.bin/*",
-        ],
-        exclude = [
-            # Exclude files with spaces which are illegal bazel labels
-            "node_modules/**/* *",
-        ],
-    ) + ["@build_bazel_rules_typescript//:node_modules"],
-    # "@build_bazel_rules_typescript//:node_modules" is incluced
-    # in `//:node_modules` so that npm dependencies that are hoisted to
-    # node_modules/@bazel/typescript/node_modules because of conflicting
-    # versions can be resolved correctly
+  name = "node_modules",
+  srcs = glob(["/".join(["node_modules", pkg, "**", ext]) for pkg in [
+    "@types",
+    "@ngrx",
+    "bytebuffer",
+    "hammerjs",
+    "jasmine",
+    "long",
+    "minimist",
+    "protobufjs",
+    "protractor",
+    "reflect-metadata",
+    "source-map",
+    "tsickle",
+    "tslib",
+    "tsutils",
+    "typescript",
+    "zone.js",
+  ] for ext in [
+    "*.js",
+    "*.json",
+    "*.d.ts",
+  ]] + [
+    "node_modules/http-server/**",
+  ]) + ["@build_bazel_rules_typescript//:node_modules"],
 )

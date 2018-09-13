@@ -13,7 +13,9 @@ ng_module(
     deps = [
         "//src/hello-world",
         "//src/todos",
+        "@material//src/lib/button",
         "@angular//packages/core",
+        "@angular//packages/common",
         "@angular//packages/router",
     ],
 )

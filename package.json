@@ -11,9 +11,9 @@
         "zone.js": "0.8.26"
     },
     "devDependencies": {
-        "@angular/compiler": "6.1.7",
-        "@angular/compiler-cli": "6.1.7",
-        "@angular/core": "6.1.7",
+        "@angular/compiler": "7.0.0-beta.4",
+        "@angular/compiler-cli": "7.0.0-beta.4",
+        "@angular/core": "7.0.0-beta.4",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/ibazel": "0.5.0",
         "@bazel/typescript": "0.16.2",
@@ -22,7 +22,8 @@
         "clang-format": "1.2.4",
         "husky": "0.14.3",
         "protractor": "5.4.1",
-        "typescript": "2.9.2"
+        "tsickle": "0.32.1",
+        "typescript": "3.0.3"
     },
     "scripts": {
         "build": "bazel build //src:bundle",

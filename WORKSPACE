@@ -48,9 +48,15 @@ http_archive(
 # The @angular repo contains rule for building Angular applications
 http_archive(
     name = "angular",
-    url = "https://github.com/angular/angular/archive/6.1.7.zip",
-    strip_prefix = "angular-6.1.7",
-    sha256 = "bd6bd47b8b65254da78158b354c4b0ffc18b9591bcc82863e359fc8d3e1cc609",
+
+    url = "https://github.com/angular/angular/archive/7.0.0-beta.4.zip",
+    strip_prefix = "angular-7.0.0-beta.4",
+    sha256 = "8b124b71b8059c97009de3f20977f7798e80c2f3185fe1d1bb4ed0549baf03e0",
+)
+
+local_repository(
+    name = "material",
+    path = "../material2",
 )
 
 # The @rxjs repo contains targets for building rxjs with bazel
