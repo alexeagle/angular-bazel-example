@@ -6,7 +6,7 @@
     "dependencies": {
         "@ngrx/store": "6.1.0",
         "rxjs": "6.3.2",
-        "systemjs": "0.21.4",
+        "systemjs": "0.21.5",
         "tslib": "1.9.3",
         "zone.js": "0.8.26"
     },

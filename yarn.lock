@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@angular/compiler-cli@angular/compiler-cli-builds#6.1.7+d9bd860":
-  version "6.1.7"
-  resolved "https://codeload.github.com/angular/compiler-cli-builds/tar.gz/3265256ac5d91e4fdccc4e0849df008a274f09e7"
+"@angular/compiler-cli@6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-6.1.8.tgz#b31842b42a6cee90d0f61f3849fbd15fc6f5ddbf"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
     tsickle "^0.32.1"
 
-"@angular/compiler@angular/compiler-builds#6.1.7+d9bd860":
-  version "6.1.7"
-  resolved "https://codeload.github.com/angular/compiler-builds/tar.gz/92d8c5a04c34b457f6db0dbde3ef793eaab47493"
+"@angular/compiler@6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.1.8.tgz#bbbb70961724c6e5755e05fc5d7f4b39d3bb4a0c"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@angular/core-builds#6.1.7+d9bd860":
-  version "6.1.7"
-  resolved "https://codeload.github.com/angular/core-builds/tar.gz/4c82c14549854588c592045be1e078c0a9d58772"
+"@angular/core@6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-6.1.8.tgz#2de584e184dc148a55ec153f8125acdf3e88eae6"
   dependencies:
     tslib "^1.9.0"
 
@@ -1462,9 +1462,9 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
-systemjs@0.21.4:
-  version "0.21.4"
-  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.21.4.tgz#043996efcac3fefcb7d62e8c40457a42e9c86e1e"
+systemjs@0.21.5:
+  version "0.21.5"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.21.5.tgz#2fcef4edfe744003da4787f3f3d45d73f94462d2"
 
 tar@^4:
   version "4.4.6"
