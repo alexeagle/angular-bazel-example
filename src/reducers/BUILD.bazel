@@ -6,6 +6,6 @@ ts_library(
     name = "reducers",
     srcs = glob(["*.ts"]),
     deps = [
-        "@npm//@ngrx/store"
-    ]
+        "@npm//@ngrx/store",
+    ],
 )

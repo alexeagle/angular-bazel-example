@@ -7,10 +7,10 @@ ts_library(
     srcs = glob(["src/*.ts"]),
     tsconfig = "//src:tsconfig-test",
     deps = [
-      "@npm//@types/jasmine",
-      "@npm//protractor",
-      "@npm//jasmine",
-    ]
+        "@npm//@types/jasmine",
+        "@npm//jasmine",
+        "@npm//protractor",
+    ],
 )
 
 protractor_web_test_suite(
