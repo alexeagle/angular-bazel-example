@@ -12,39 +12,3 @@ alias(
     name = "tsconfig.json",
     actual = "//src:tsconfig.json",
 )
-
-# This export allows targets in other packages to reference files that live
-# in this package.
-exports_files([
-    # Let devserver and testing targets reference systemjs & zone.js distros
-    "node_modules/systemjs/dist/system.js",
-    "node_modules/zone.js/dist/zone.min.js",
-    "node_modules/zone.js/dist/zone-testing-bundle.js",
-])
-
-filegroup(
-    name = "node_modules",
-    srcs = glob(
-        [
-            # Include only .js, .json & .d.ts files to reduce the number of
-            # files in the //:node_modules filegroup
-            "node_modules/**/*.js",
-            "node_modules/**/*.json",
-            "node_modules/**/*.d.ts",
-            # All the files in the protractor package are necesssary
-            "node_modules/protractor/**",
-            # Also include all files in node_modules/.bin
-            "node_modules/.bin/*",
-        ],
-        exclude = [
-            # Files under test & docs may contain file names that
-            # are not legal Bazel labels (e.g.,
-            # node_modules/ecstatic/test/public/中文/檔案.html)
-            "node_modules/**/test/**",
-            "node_modules/**/docs/**",
-            # Files with spaces in the name are not legal Bazel labels
-            "node_modules/**/* */**",
-            "node_modules/**/* *",
-        ],
-    )
-)

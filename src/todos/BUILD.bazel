@@ -27,6 +27,8 @@ ng_module(
         "@angular//packages/core",
         "@angular//packages/forms",
         "@angular//packages/router",
+        "@npm//@ngrx/store",
+        "@npm//@types",
         "@rxjs",
     ],
 )

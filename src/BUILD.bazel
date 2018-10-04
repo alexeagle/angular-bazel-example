@@ -21,6 +21,7 @@ ng_module(
         "//src/todos",
         "@angular//packages/core",
         "@angular//packages/router",
+        "@npm//@ngrx/store",
     ],
 )
 
@@ -32,9 +33,9 @@ ts_devserver(
     name = "devserver",
     # serve these files rooted at /
     additional_root_paths = [
-        "angular_bazel_example/node_modules/zone.js/dist",
-        "angular_bazel_example/node_modules/tslib",
-        "angular_bazel_example/node_modules/@ngrx/store/bundles",
+        "npm/node_modules/zone.js/dist",
+        "npm/node_modules/tslib",
+        "npm/node_modules/@ngrx/store/bundles",
     ],
     # Start from the development version of the main
     entry_module = "angular_bazel_example/src/main.dev",
@@ -45,9 +46,9 @@ ts_devserver(
     serving_path = "/bundle.min.js",
     # Serve these files in addition to the JavaScript bundle
     static_files = [
-        "//:node_modules/zone.js/dist/zone.min.js",
-        "//:node_modules/tslib/tslib.js",
-        "//:node_modules/@ngrx/store/bundles/store.umd.min.js",
+        "@npm//node_modules/zone.js:dist/zone.min.js",
+        "@npm//node_modules/tslib:tslib.js",
+        "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
         "index.html",
     ],
     # Tell Bazel to build the sources first
@@ -68,8 +69,10 @@ rollup_bundle(
         "src/todos/todos.module.ngfactory",
     ],
     entry_point = "src/main",
-    node_modules = "//:node_modules",
-    deps = ["//src"],
+    deps = [
+        "//src",
+        "@npm//@ngrx/store",
+    ],
 )
 
 # Copy zone.min.js to this package.
@@ -77,7 +80,7 @@ rollup_bundle(
 # package.
 genrule(
     name = "copy_zonejs",
-    srcs = ["//:node_modules/zone.js/dist/zone.min.js"],
+    srcs = ["@npm//node_modules/zone.js:dist/zone.min.js"],
     outs = ["zone.min.js"],
     cmd = "cp $< $@",
 )
@@ -85,7 +88,7 @@ genrule(
 # See comment for zonejs above
 genrule(
     name = "copy_systemjs",
-    srcs = ["//:node_modules/systemjs/dist/system.js"],
+    srcs = ["@npm//node_modules/systemjs:dist/system.js"],
     outs = ["system.js"],
     cmd = "cp $< $@",
 )

@@ -29,26 +29,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@bazel/bazel-darwin_x64@0.18.0-rc4":
-  version "0.18.0-rc4"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-darwin_x64/-/bazel-darwin_x64-0.18.0-rc4.tgz#8271cbd5ce1e6504d483bd3e5d0bb54abe8166b0"
-
-"@bazel/bazel-linux_x64@0.18.0-rc4":
-  version "0.18.0-rc4"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-linux_x64/-/bazel-linux_x64-0.18.0-rc4.tgz#797d5898d8e92f33f1d53b628162daa3c1050155"
-
-"@bazel/bazel-win32_x64@0.18.0-rc4":
-  version "0.18.0-rc4"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-win32_x64/-/bazel-win32_x64-0.18.0-rc4.tgz#e70e9f7e69a42a3e9066cf9866f8c062cf57d110"
-
-"@bazel/bazel@^0.18.0-rc4":
-  version "0.18.0-rc4"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel/-/bazel-0.18.0-rc4.tgz#8405d1d82fd686f62077a15dd646acee5c92b48f"
-  optionalDependencies:
-    "@bazel/bazel-darwin_x64" "0.18.0-rc4"
-    "@bazel/bazel-linux_x64" "0.18.0-rc4"
-    "@bazel/bazel-win32_x64" "0.18.0-rc4"
-
 "@bazel/benchmark-runner@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@bazel/benchmark-runner/-/benchmark-runner-0.1.0.tgz#a586394fcf7f2402b381319fbc2750627b5a06f1"
