@@ -29,6 +29,5 @@ ng_module(
         "@angular//packages/router",
         "@npm//@ngrx/store",
         "@npm//@types",
-        "@rxjs",
     ],
 )
