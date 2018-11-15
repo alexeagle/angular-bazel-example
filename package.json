@@ -20,7 +20,7 @@
         "@angular/core": "7.0.2",
         "@angular/material": "7.0.2",
         "@bazel/benchmark-runner": "0.1.0",
-        "@bazel/ibazel": "0.5.0",
+        "@bazel/ibazel": "0.7.0",
         "@bazel/karma": "0.20.3",
         "@bazel/typescript": "0.20.3",
         "@types/jasmine": "2.8.8",
