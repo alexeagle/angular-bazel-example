@@ -36,8 +36,8 @@ http_archive(
 )
 
 # Angular material
-# TODO(gmagolan): Using commit that is compatible with angular 7.0.4
-# Update to https://github.com/angular/material2 v7.0.5 when released
+# Using commit that is compatible with angular 7.0.4
+# TODO(gmagolan): Update to https://github.com/angular/material2 v7.0.5 when released
 http_archive(
     name = "angular_material",
     url = "https://github.com/DevVersion/material2/archive/c94e095841b063380b9d2c5611da1ff99445e516.zip",
