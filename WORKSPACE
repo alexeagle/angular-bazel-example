@@ -23,8 +23,8 @@ http_archive(
 # The @angular repo contains rule for building Angular applications
 http_archive(
     name = "angular",
-    url = "https://github.com/angular/angular/archive/7.0.2.zip",
-    strip_prefix = "angular-7.0.2",
+    url = "https://github.com/angular/angular/archive/7.0.4.zip",
+    strip_prefix = "angular-7.0.4",
 )
 
 # The @rxjs repo contains targets for building rxjs with bazel
@@ -36,18 +36,19 @@ http_archive(
 )
 
 # Angular material
-# TODO(gmagolan): update to next tagged https://github.com/angular/material2
+# TODO(gmagolan): Using commit that is compatible with angular 7.0.4
+# Update to https://github.com/angular/material2 v7.0.5 when released
 http_archive(
     name = "angular_material",
-    url = "https://github.com/angular/material2/archive/150c964c320c8573b6c02eb0a7024bb2919a22c2.zip",
-    strip_prefix = "material2-150c964c320c8573b6c02eb0a7024bb2919a22c2",
+    url = "https://github.com/DevVersion/material2/archive/c94e095841b063380b9d2c5611da1ff99445e516.zip",
+    strip_prefix = "material2-c94e095841b063380b9d2c5611da1ff99445e516",
 )
 
 # Rules for compiling sass
 http_archive(
     name = "io_bazel_rules_sass",
-    url = "https://github.com/bazelbuild/rules_sass/archive/1.14.1.zip",
-    strip_prefix = "rules_sass-1.14.1",
+    url = "https://github.com/bazelbuild/rules_sass/archive/1.15.1.zip",
+    strip_prefix = "rules_sass-1.15.1",
 )
 
 ####################################
@@ -92,7 +93,7 @@ load("@build_bazel_rules_typescript//:defs.bzl", "ts_setup_workspace", "check_ru
 
 ts_setup_workspace()
 
-load("@io_bazel_rules_sass//sass:sass_repositories.bzl", "sass_repositories")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
 
 sass_repositories()
 
