@@ -23,7 +23,7 @@
         "@angular/common": "7.0.4",
         "@angular/core": "7.0.4",
         "@angular/material": "7.0.4",
-        "@bazel/bazel": "^0.19.1",
+        "@bazel/bazel": "0.19.1",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/ibazel": "0.5.0",
         "@bazel/karma": "0.20.3",
