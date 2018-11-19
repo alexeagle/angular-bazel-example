@@ -8,9 +8,6 @@
 workspace(name = "angular_bazel_example")
 
 # The Bazel buildtools repo contains tools like the BUILD file formatter, buildifier
-# This commit matches the version of buildifier in angular/ngcontainer
-# If you change this, also check if it matches the version in the angular/ngcontainer
-# version in /.circleci/config.yml
 BAZEL_BUILDTOOLS_VERSION = "49a6c199e3fbf5d94534b2771868677d3f9c6de9"
 
 http_archive(
