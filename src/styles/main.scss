@@ -6,6 +6,10 @@ html, body {
   font-family: $default-font-stack;
   padding: 0;
   margin: 0;
+
+  .content {
+    margin: 2rem;
+  }
 }
 
 nav > .mat-toolbar {

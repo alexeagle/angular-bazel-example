@@ -1,7 +1,16 @@
 <h1>Home</h1>
 
-<div>Hello {{ name }}</div>
+<mat-card>
+  <mat-card-title>
+    <div>Hello {{ name }}</div>
+  </mat-card-title>
 
-<mat-form-field><input matInput [(ngModel)]="name"/></mat-form-field>
+  <mat-card-content>
+    <mat-form-field><input matInput [(ngModel)]="name"/></mat-form-field>
+  </mat-card-content>
 
-<div><mat-icon>mood</mat-icon></div>
+  <mat-card-footer>
+    <div class="mood-icon"><mat-icon>mood</mat-icon></div>
+  </mat-card-footer>
+</mat-card>
+
