@@ -1,0 +1,27 @@
+@import "./fonts";
+@import "./colors";
+// FIXME: import angular/material/theming
+
+html, body {
+  font-family: $default-font-stack;
+  padding: 0;
+  margin: 0;
+}
+
+nav > .mat-toolbar {
+	background: #673ab7; //FIXME: mat-color($primary);
+	color: #fff;
+
+	.nav-logo {
+		padding-top: 12px;
+		height: 28px;
+	}
+
+	.flex-spacer {
+		flex: 1 1 auto;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

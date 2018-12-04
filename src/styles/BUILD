@@ -1,6 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@io_bazel_rules_sass//:defs.bzl", "sass_library")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 
 sass_library(
     name = "colors",
@@ -15,6 +16,15 @@ sass_library(
 sass_library(
     name = "shared",
     srcs = ["shared.scss"],
+    deps = [
+        ":colors",
+        ":fonts",
+    ],
+)
+
+sass_binary(
+    name = "main",
+    src  = "main.scss",
     deps = [
         ":colors",
         ":fonts",

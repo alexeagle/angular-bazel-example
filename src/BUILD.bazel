@@ -17,6 +17,7 @@ ng_module(
     ),
     assets = [
         ":app.component.html",
+        "//src/styles:main"
     ],
     tsconfig = ":tsconfig.json",
     deps = [
@@ -56,6 +57,7 @@ ts_devserver(
         "@npm//node_modules/tslib:tslib.js",
         "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
+        "//src/styles:main.css",
         "index.html",
     ],
     # Tell Bazel to build the sources first
