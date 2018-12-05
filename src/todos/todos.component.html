@@ -13,7 +13,7 @@
       (click)="addTodo(todo)"
       [disabled]=!todo
       *ngIf="!editing">
-        Add todo
+        Create
     </button>
 
     <button mat-raised-button
@@ -32,9 +32,13 @@
 
 <mat-list>
   <mat-list-item *ngFor="let todo of todos$ | async; let i = index;">
-    <span [class.done]="todo.done">{{ todo.value }}</span>
-    <button mat-raised-button (click)="editTodo(todo, i)">Edit</button>
-    <button mat-raised-button (click)="toggleDone(todo, i)">Toggle Done</button>
-    <button mat-raised-button color="warn" (click)="deleteTodo(i)">X</button>
+    <mat-icon matListIcon (click)="toggleDone(todo, i)">{{ todo.done ? "check_box" : "check_box_outline_blank" }}</mat-icon>
+    <div class="mat-list-text" [class.done]="todo.done">{{ todo.value }}</div>
+		<div>
+			<mat-icon matListIcon (click)="editTodo(todo, i)" class="edit-icon">edit</mat-icon>
+		</div>
+		<div>
+			<mat-icon matListIcon (click)="deleteTodo(i)">delete</mat-icon>
+		</div>
   </mat-list-item>
 </mat-list>
