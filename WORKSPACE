@@ -20,8 +20,8 @@ http_archive(
 # The @angular repo contains rule for building Angular applications
 http_archive(
     name = "angular",
-    url = "https://github.com/angular/angular/archive/7.0.4.zip",
-    strip_prefix = "angular-7.0.4",
+    url = "https://github.com/angular/angular/archive/7.1.0.zip",
+    strip_prefix = "angular-7.1.0",
 )
 
 # The @rxjs repo contains targets for building rxjs with bazel
@@ -33,12 +33,11 @@ http_archive(
 )
 
 # Angular material
-# Using commit that is compatible with angular 7.0.4
-# TODO(gmagolan): Update to https://github.com/angular/material2 v7.0.5 when released
+# Note: material v7.1.1 is compatible with angular v7.1.0 under Bazel
 http_archive(
     name = "angular_material",
-    url = "https://github.com/DevVersion/material2/archive/c94e095841b063380b9d2c5611da1ff99445e516.zip",
-    strip_prefix = "material2-c94e095841b063380b9d2c5611da1ff99445e516",
+    url = "https://github.com/angular/material2/archive/7.1.1.zip",
+    strip_prefix = "material2-7.1.1",
 )
 
 # Rules for compiling sass
@@ -55,6 +54,14 @@ load("@angular//packages/bazel:package.bzl", "rules_angular_dependencies")
 
 rules_angular_dependencies()
 
+load("@build_bazel_rules_typescript//:package.bzl", "rules_typescript_dependencies")
+
+rules_typescript_dependencies()
+
+load("@build_bazel_rules_nodejs//:package.bzl", "rules_nodejs_dependencies")
+
+rules_nodejs_dependencies()
+
 load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "yarn_install")
 
 # The minimum bazel version to use with this example repo
@@ -63,7 +70,7 @@ check_bazel_version("0.19.0")
 
 node_repositories(
     node_version = "10.9.0",
-    yarn_version = "1.9.2",
+    yarn_version = "1.12.1",
 )
 
 yarn_install(

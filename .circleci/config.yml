@@ -75,6 +75,7 @@ jobs:
 
   benchmark:
     <<: *job_defaults
+    resource_class: xlarge
     steps:
       - checkout:
           <<: *post_checkout
@@ -84,6 +85,17 @@ jobs:
 
       # Install Bazel/ibazel from NPM
       - run: yarn
+
+      # Run `bazel build` first as a temporary workaround to unexpected
+      # benchmark failure when entire build runs withing ibazel-benchmark-runner
+      # ```
+      # Error running Bazel unexpected EOF
+      # [ibazel-benchmark-runner] iBazel process exited unexpectedly 4 null
+      # error Command failed with exit code 1.
+      # ```
+      # TODO(gregmagolan): remove this once issue is resolved
+      - run: ./node_modules/.bin/bazel build ...
+
       # Run the benchmark
       - run: yarn benchmark
 
