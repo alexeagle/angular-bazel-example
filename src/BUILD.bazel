@@ -17,7 +17,7 @@ ng_module(
     ),
     assets = [
         ":app.component.html",
-        "//src/styles:main"
+        "//src/styles:main",
     ],
     tsconfig = ":tsconfig.json",
     deps = [

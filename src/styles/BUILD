@@ -24,7 +24,7 @@ sass_library(
 
 sass_binary(
     name = "main",
-    src  = "main.scss",
+    src = "main.scss",
     deps = [
         ":colors",
         ":fonts",
