@@ -58,6 +58,7 @@ ts_devserver(
         "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
         "//src/styles:main.css",
+        "//src/images:image_assets",
         "index.html",
     ],
     # Tell Bazel to build the sources first
@@ -120,5 +121,6 @@ history_server(
         ":copy_material_theme",
         ":copy_systemjs",
         ":copy_zonejs",
+        "//src/images:image_assets",
     ],
 )
