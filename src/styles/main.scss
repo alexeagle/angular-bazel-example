@@ -29,3 +29,20 @@ nav > .mat-toolbar {
 		text-decoration: none;
 	}
 }
+
+.mobile-nav > a {
+	flex: 1 1 auto;
+}
+
+.hide-small {
+	@media screen and (max-width: 720px) {
+		display: none !important;
+	}
+}
+
+.show-small {
+	@media screen and (min-width: 720px) {
+		display: none !important;
+	}
+}
+
