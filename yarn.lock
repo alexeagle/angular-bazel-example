@@ -175,7 +175,16 @@
     requirejs "2.3.5"
     tmp "0.0.33"
 
-"@bazel/typescript@0.21.0", "@bazel/typescript@^0.21.0":
+"@bazel/typescript@0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.22.0.tgz#8b38183125c3f25e6023b12a371561d9b54182d8"
+  integrity sha512-2oKxPHlt3TNJx2RVVvC00ahcYNuIg1pQPjKQO7qyMNGGme3fqqzv5gRUDa5be/B01FxQDFpuBCHoavH7PilPRA==
+  dependencies:
+    protobufjs "5.0.3"
+    source-map-support "0.5.9"
+    tsutils "2.27.2"
+
+"@bazel/typescript@^0.21.0":
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.21.0.tgz#41c304f77a42c6a016280d0f4c20e0749c3f4b2a"
   integrity sha512-ASXj0RFybmqoa3LwqkTU3gNkX9bY9wL/VDNo5hlp9pynYWl4RMpe9V3m/qDIdtSuLJ+qD+Z3FKT/OcpWQHMlYA==
