@@ -1,6 +1,5 @@
 @import "./fonts";
 @import "./colors";
-// FIXME: import angular/material/theming
 
 html, body {
   font-family: $default-font-stack;
@@ -13,7 +12,7 @@ html, body {
 }
 
 nav > .mat-toolbar {
-	background: #673ab7; //FIXME: mat-color($primary);
+	background: $theme-secondary;
 	color: #fff;
 
 	.nav-logo {
