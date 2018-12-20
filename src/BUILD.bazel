@@ -2,6 +2,8 @@ package(default_visibility = ["//visibility:public"])
 
 load("@angular//:index.bzl", "ng_module")
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
+load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
+load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
 
 ts_config(
     name = "tsconfig-test",
@@ -30,6 +32,13 @@ ng_module(
     ],
 )
 
+# We always strip these paths off the front of any assets we serve
+_ROOT_DIRS = [
+    "npm/node_modules/zone.js/dist",
+    "npm/node_modules/@angular/material/prebuilt-themes",
+    "npm/node_modules/@ngrx/store/bundles",
+]
+
 # This devserver is written in Go and is super-fast.
 # It doesn't run any bundler or code splitter. Instead, it concatenates
 # UMD JavaScript code on-the-fly in-memory.
@@ -37,35 +46,41 @@ ng_module(
 ts_devserver(
     name = "devserver",
     # serve these files rooted at /
-    additional_root_paths = [
-        "npm/node_modules/zone.js/dist",
-        "npm/node_modules/tslib",
-        "npm/node_modules/@angular/material/prebuilt-themes",
-        "npm/node_modules/@ngrx/store/bundles",
+    additional_root_paths = _ROOT_DIRS,
+    # Serve these files but don't inject tags for them into the index file
+    # This might be because we only want to lazy-load these scripts on-demand,
+    # or because they aren't compatible with Require.js so we must use a runtime
+    # loader to load them.
+    data = [
+        "//src/images:image_assets",
+        "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
     entry_module = "angular_bazel_example/src/main.dev",
+    # <script> and <link> tags will be automatically injected into this index file
+    index_html = "index.html",
+    # These scripts will be included in the JS bundle after require.js
+    # They should have only named UMD modules, or require.js will throw.
     scripts = [
         ":require.config.js",
         ":module-id.js",
-    ],
-    # This is the URL we'll point our <script> tag at
-    serving_path = "/bundle.min.js",
-    # Serve these files in addition to the JavaScript bundle
-    static_files = [
-        "@npm//node_modules/zone.js:dist/zone.min.js",
         "@npm//node_modules/tslib:tslib.js",
-        "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
-        "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
+    ],
+    # Serve these files in addition to the JavaScript bundle
+    # The corresponding <script> or <link> tags will be injected into the index_html
+    static_files = [
         "//src/styles:main.css",
-        "//src/images:image_assets",
-        "index.html",
+        "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
+        #  We load zone.js outside the bundle. That's because it's a "pollyfill"
+        # which speculates that such features might be available in a browser.
+        # Also it's tricky to configure dead code elimination to understand that
+        # zone.js is used, given that we don't have any import statement that
+        # imports from it.
+        "@npm//node_modules/zone.js:dist/zone.min.js",
     ],
     # Tell Bazel to build the sources first
     deps = ["//src"],
 )
-
-load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary", "rollup_bundle")
 
 rollup_bundle(
     name = "bundle",
@@ -85,43 +100,28 @@ rollup_bundle(
     ],
 )
 
-# Copy zone.min.js to this package.
-# Needed because the prodserver only loads static files that appear under this
-# package.
-genrule(
-    name = "copy_zonejs",
-    srcs = ["@npm//node_modules/zone.js:dist/zone.min.js"],
-    outs = ["zone.min.js"],
-    cmd = "cp $< $@",
+web_package(
+    name = "prodapp",
+    additional_root_paths = _ROOT_DIRS + ["npm/node_modules/systemjs/dist"],
+    # do not sort
+    assets = [
+        "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
+        "@npm//node_modules/zone.js:dist/zone.min.js",
+        # We load system.js here as it is required in prodmode for code-splitting support.
+        "@npm//node_modules/systemjs:dist/system.js",
+        "//src/styles:main",
+        ":bundle.min.js",
+    ],
+    data = [
+        ":bundle",
+        "//src/images:image_assets",
+    ],
+    # <script> and <link> tags will be automatically injected into this index.
+    index_html = "index.html",
 )
-
-# See comment for zonejs above
-genrule(
-    name = "copy_systemjs",
-    srcs = ["@npm//node_modules/systemjs:dist/system.js"],
-    outs = ["system.js"],
-    cmd = "cp $< $@",
-)
-
-# See comment for zonejs above
-genrule(
-    name = "copy_material_theme",
-    srcs = ["@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css"],
-    outs = ["deeppurple-amber.css"],
-    cmd = "cp $< $@",
-)
-
-load("@build_bazel_rules_nodejs//:defs.bzl", "history_server")
 
 history_server(
     name = "prodserver",
-    data = [
-        "index.html",
-        ":bundle",
-        ":copy_material_theme",
-        ":copy_systemjs",
-        ":copy_zonejs",
-        "//src/images:image_assets",
-        "//src/styles:main",
-    ],
+    data = [":prodapp"],
+    templated_args = ["src/prodapp"],
 )

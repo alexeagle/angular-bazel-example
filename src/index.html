@@ -6,39 +6,9 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="/deeppurple-amber.css" rel="stylesheet">
-    <link href="/styles/main.css" rel="stylesheet">
   </head>
   <body>
     <!-- The Angular application will be bootstrapped into this element. -->
     <app-component></app-component>
-
-    <!--
-      We load zone.js outside the bundle. That's because it's a "pollyfill"
-      which speculates that such features might be available in a browser.
-      Also it's tricky to configure dead code elimination to understand that
-      zone.js is used, given that we don't have any import statement that
-      imports from it.
-    -->
-    <script src="/zone.min.js"></script>
-
-    <!--
-      We load system.js here as it is required in prodmode for code-splitting
-      support. This script will fail to load in devmode.
-    -->
-    <script src="/system.js"></script>
-
-    <!--
-      For development mode, this script will be bundled on-the-fly by
-      the devserver, based on the latest JS files built by Bazel.
-      For production, you should be able to use the same index.html file, but
-      this JS resource would be served from a static file.
-
-      To allow the same index.html file to be used for dev and prod mode, we
-      name the script "bundle.min.js". This is misleading since it's not
-      actually minified in dev mode. A possible resolution to this would be for
-      a server-side templating engine to write a dynamic index.html file.
-    -->
-    <script src="/bundle.min.js"></script>
   </body>
 </html>
