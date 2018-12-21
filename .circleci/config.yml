@@ -41,10 +41,16 @@ jobs:
           key: *cache_key
 
       # Install Bazel
-      - run: yarn
-      # Enforce that BUILD files are formatted.
-      - run: 'yarn buildifier -mode=check ||
-              (echo "BUILD files not formatted. Please run ''yarn buildifier''" ; exit 1)'
+      - run: yarn install
+
+      # Run the Buildifier to check our Bazel rules for format issues.
+      - run: 'yarn bazel:format --mode=check ||
+              (echo "BUILD files not formatted. Please run ''yarn bazel:format --mode=fix''" ; exit 1)'
+
+      # Run the Buildifier to check our Bazel rules for lint issues.
+      # Note: The `--lint=warn` will auto fixe (re-write) the affected files. 
+      - run: 'yarn bazel:format --lint=warn ||
+              (echo "BUILD files contain unresolved lint errors. Please fix manually the remaining errors." ; exit 1)'
 
   build:
     <<: *job_defaults
