@@ -24,16 +24,6 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_typescript/archive/2963b55370b21d545d0ac0f30fca9dc74a0f5538.zip",
 )
 
-# The Bazel buildtools repo contains tools like the BUILD file formatter, buildifier
-BAZEL_BUILDTOOLS_VERSION = "49a6c199e3fbf5d94534b2771868677d3f9c6de9"
-
-http_archive(
-    name = "com_github_bazelbuild_buildtools",
-    sha256 = "edf39af5fc257521e4af4c40829fffe8fba6d0ebff9f4dd69a6f8f1223ae047b",
-    strip_prefix = "buildtools-%s" % BAZEL_BUILDTOOLS_VERSION,
-    url = "https://github.com/bazelbuild/buildtools/archive/%s.zip" % BAZEL_BUILDTOOLS_VERSION,
-)
-
 # The @angular repo contains rule for building Angular applications
 http_archive(
     name = "angular",

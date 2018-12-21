@@ -3,7 +3,8 @@
 # See remote cache documentation in /docs/BAZEL.md
 
 # Don't be spammy in the logs
-build --noshow_progress
+# TODO: re-enable after we deal with 10m timeout on circleci
+#build --noshow_progress
 
 # Don't run manual tests
 test --test_tag_filters=-manual
