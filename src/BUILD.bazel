@@ -2,6 +2,8 @@ load("@angular//:index.bzl", "ng_module")
 load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
 load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -126,4 +128,18 @@ history_server(
     name = "prodserver",
     data = [":prodapp"],
     templated_args = ["src/prodapp"],
+)
+
+nodejs_image(
+    name = "nodejs_image",
+    data = [":prodapp"],
+    entry_point = "history-server/modules/cli.js",
+    node_modules = "@history-server_runtime_deps//:node_modules",
+    templated_args = ["src/prodapp"],
+)
+
+container_image(
+    name = "image",
+    base = ":nodejs_image",
+    workdir = "/app/src/nodejs_image.binary.runfiles/angular_bazel_example",
 )

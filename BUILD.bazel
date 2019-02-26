@@ -1,3 +1,5 @@
+load("@k8s_deploy//:defaults.bzl", "k8s_deploy")
+
 package(default_visibility = ["//visibility:public"])
 
 # ts_library and ng_module use the `//:tsconfig.json` target
@@ -6,4 +8,12 @@ package(default_visibility = ["//visibility:public"])
 alias(
     name = "tsconfig.json",
     actual = "//src:tsconfig.json",
+)
+
+k8s_deploy(
+    name = "deploy",
+    images = {
+        "gcr.io/internal-200822/src:nodejs_image": "//src:image",
+    },
+    template = ":deployment.yaml",
 )
