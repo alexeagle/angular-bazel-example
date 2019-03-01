@@ -12,7 +12,7 @@
         "rxjs": "6.3.3",
         "systemjs": "0.21.5",
         "tslib": "1.9.3",
-        "zone.js": "0.8.26"
+        "zone.js": "0.8.29"
     },
     "devDependencies": {
         "@angular/animations": "7.1.3",
