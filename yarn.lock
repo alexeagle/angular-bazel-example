@@ -167,15 +167,15 @@
     "@bazel/buildifier-darwin_x64" "0.20.0"
     "@bazel/buildifier-linux_x64" "0.20.0"
 
+"@bazel/ibazel@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.10.0.tgz#7f491a720e02e1c870c2da21566e2ce66ca0a2b4"
+  integrity sha512-zkyQYqL+gHbvOsGQeAeQdVy5zg//gmM1x077uXoDJHgAASBvtBJ4doKeXVi27IdAu8R9pyxemflPKpwZx1VdTw==
+
 "@bazel/ibazel@0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
-
-"@bazel/ibazel@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.9.1.tgz#d3248d60b7ef44ced1c2bdecda87ab2b6141a56e"
-  integrity sha512-twdytcFr+zj7CQcJCDegrAAI2soRyL34yaxD+3g59W8u188iOsZ392gscFJufysoEQKvAon1UiI3DqCrS+qYDw==
 
 "@bazel/karma@0.22.0":
   version "0.22.0"
