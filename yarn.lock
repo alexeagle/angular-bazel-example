@@ -61,10 +61,10 @@
     shelljs "0.8.2"
     tsickle "0.34.0"
 
-"@angular/cdk@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.1.1.tgz#6916b2303af5e0a56a9b64ff4d54642cf191c54f"
-  integrity sha512-woW9lWDBKRuxZipMzWofrAY7YpuZd4vf/J1YPjmAqV7U94MaDFyizRLyFolbTZVYo8ggh9U3SQAWRrEBvJNsjg==
+"@angular/cdk@7.3.5":
+  version "7.3.5"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.5.tgz#1b8a73ebb79371d8e1fe055a74bd5dd9515883a7"
+  integrity sha512-5m5HYm/D3/HveZdQQ4wtXk1Vm7bPiV+X5hPgegSHaoX6XONLIwSf821UqE+yYgjalILN44080+p3wHXtQT6Fkg==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -108,10 +108,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/material@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.1.1.tgz#147b7565262e04d504c8dab7317632967a3db02a"
-  integrity sha512-wjYAWsdWpb8/BgoIfoUomnycoljU00avJ3hRIgPNnEpZhB7zqiBA8tCitzDS4NK8dKBJjM9WRAOj6yl6x3+9wA==
+"@angular/material@7.3.5":
+  version "7.3.5"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.5.tgz#987df1e2a428660b15c860d05360449b008682b1"
+  integrity sha512-BkakYMuvicKIybp4LI1FKbC8a1jmmTo1ruNugy4PvQmjvj+kim7OMtAR/yCHycYq4cNQDq5LmnqLdclQEniqFw==
   dependencies:
     tslib "^1.7.1"
 
