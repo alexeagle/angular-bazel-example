@@ -24,6 +24,8 @@ ng_module(
         ":todos-styles",
     ],
     tsconfig = "//src:tsconfig.json",
+    # TODO(manekinekko): FW-1004 Type checking is currently not complete.
+    type_check = False,
     deps = NG_FACTORY_ADDED_IMPORTS + [
         "//src/shared/material",
         "//src/app/todos/reducers",

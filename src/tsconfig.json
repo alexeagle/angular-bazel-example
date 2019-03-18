@@ -23,6 +23,11 @@
         // each library.
         // Instead we'll be explicit about declaring ambient type dependencies
         // using the ///<reference types=""/> syntax.
-        "types": []
+        "types": [],
+
+        "module": "esnext"
+    },
+    "angularCompilerOptions": {
+        "enableIvy": true
     }
 }

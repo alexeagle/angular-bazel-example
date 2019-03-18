@@ -19,6 +19,11 @@
           "options": {
             "targetLabel": "//src:prodapp",
             "bazelCommand": "build"
+          },
+          "configurations": {
+            "production": {
+              "aot": true
+            }
           }
         },
         "serve": {

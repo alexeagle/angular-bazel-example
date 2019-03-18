@@ -4,3 +4,4 @@ dist
 .firebase
 .DS_Store
 .bazelrc.user
+.idea

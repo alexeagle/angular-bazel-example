@@ -32,9 +32,7 @@ http_archive(
 # Check the bazel version and download npm dependencies
 load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "yarn_install")
 
-# Bazel version must be at least v0.21.0 because:
-#   - 0.21.0 Using --incompatible_strict_action_env flag fixes cache when running `yarn bazel`
-#            (see https://github.com/angular/angular/issues/27514#issuecomment-451438271)
+# Bazel version must be at least v0.26.0 because we use managed_directories above
 check_bazel_version(
     message = """
 You no longer need to install Bazel on your machine.
