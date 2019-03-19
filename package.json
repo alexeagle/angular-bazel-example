@@ -29,7 +29,7 @@
         "@bazel/ibazel": "0.9.1",
         "@bazel/karma": "0.22.0",
         "@bazel/typescript": "0.22.0",
-        "@types/jasmine": "3.3.5",
+        "@types/jasmine": "3.3.12",
         "@types/node": "6.14.4",
         "clang-format": "1.2.4",
         "husky": "0.14.3",
