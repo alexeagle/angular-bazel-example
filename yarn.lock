@@ -29,15 +29,17 @@
     "@angular-devkit/core" "7.3.6"
     rxjs "6.3.3"
 
-"@angular/animations@angular/animations-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/animations-builds/tar.gz/47fa8196a4f3a9269d38c11b64665be54ed56080"
+"@angular/animations@angular/animations-builds#8.0.0-beta.9-ivy-aot+6cd3743":
+  version "8.0.0-beta.9+55.sha-6cd3743.with-local-changes"
+  uid "8a556a428d26440dd09b9b13767a3f16894aafcb"
+  resolved "https://codeload.github.com/angular/animations-builds/tar.gz/8a556a428d26440dd09b9b13767a3f16894aafcb"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/bazel@angular/bazel-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/bazel-builds/tar.gz/b05a19f164dfadb67a65a6a8e5ac87cbc59c3415"
+"@angular/bazel@angular/bazel-builds#8.0.0-beta.9-ivy-aot+a06f034":
+  version "8.0.0-beta.9+78.sha-a06f034.with-local-changes"
+  uid "7cc118e4bda917f1cfa228f9826b21b483bb875a"
+  resolved "https://codeload.github.com/angular/bazel-builds/tar.gz/7cc118e4bda917f1cfa228f9826b21b483bb875a"
   dependencies:
     "@angular-devkit/architect" "^0.13.4"
     "@angular-devkit/core" "^7.0.4"
@@ -65,9 +67,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@angular/compiler-cli-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/compiler-cli-builds/tar.gz/8dd09e0489f721980d3f9ae051927ad3e8445d8c"
+"@angular/compiler-cli@angular/compiler-cli-builds#8.0.0-beta.9-ivy-aot+6cd3743":
+  version "8.0.0-beta.9+55.sha-6cd3743.with-local-changes"
+  uid "7d8c253bcd6ce3b4cb19551b8a4f61e1c8208620"
+  resolved "https://codeload.github.com/angular/compiler-cli-builds/tar.gz/7d8c253bcd6ce3b4cb19551b8a4f61e1c8208620"
   dependencies:
     canonical-path "1.0.0"
     chokidar "^2.1.1"
@@ -93,9 +96,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@angular/forms-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/forms-builds/tar.gz/330991fdef9786c0e09ea6abaaa846cd5cce0ce7"
+"@angular/forms@angular/forms-builds#8.0.0-beta.9-ivy-aot+a06f034":
+  version "8.0.0-beta.9+78.sha-a06f034.with-local-changes"
+  uid faf96e46a81f67efdd890b0134141bdb5c11c90b
+  resolved "https://codeload.github.com/angular/forms-builds/tar.gz/faf96e46a81f67efdd890b0134141bdb5c11c90b"
   dependencies:
     tslib "^1.9.0"
 
@@ -106,15 +110,17 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@angular/platform-browser-dynamic-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/platform-browser-dynamic-builds/tar.gz/b380e47568b3541f437b44f4ecbb1fb63d474912"
+"@angular/platform-browser-dynamic@angular/platform-browser-dynamic-builds#8.0.0-beta.9-ivy-aot+a06f034":
+  version "8.0.0-beta.9+78.sha-a06f034.with-local-changes"
+  uid e6a3ad4816abedc5ce46eb8a7e15cef183a43db1
+  resolved "https://codeload.github.com/angular/platform-browser-dynamic-builds/tar.gz/e6a3ad4816abedc5ce46eb8a7e15cef183a43db1"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@angular/platform-browser-builds#8.0.0-beta.9+b5295ad":
-  version "8.0.0-beta.9"
-  resolved "https://codeload.github.com/angular/platform-browser-builds/tar.gz/8b944dc6c5975d53475c75fe3707d1d7fc4f2c6f"
+"@angular/platform-browser@angular/platform-browser-builds#8.0.0-beta.9-ivy-aot+a06f034":
+  version "8.0.0-beta.9+78.sha-a06f034.with-local-changes"
+  uid a2894518765657008b46f323ef6a145e22b6ac1b
+  resolved "https://codeload.github.com/angular/platform-browser-builds/tar.gz/a2894518765657008b46f323ef6a145e22b6ac1b"
   dependencies:
     tslib "^1.9.0"
 

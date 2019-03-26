@@ -8,14 +8,14 @@
         "yarn": ">=1.9.2 <2.0.0"
     },
     "dependencies": {
-        "@angular/animations": "angular/animations-builds#8.0.0-beta.9+b5295ad",
+        "@angular/animations": "angular/animations-builds#8.0.0-beta.9-ivy-aot+6cd3743",
         "@angular/cdk": "7.3.5",
         "@angular/common": "angular/common-builds#8.0.0-beta.9+b5295ad",
         "@angular/core": "angular/core-builds#8.0.0-beta.9+b5295ad",
-        "@angular/forms": "angular/forms-builds#8.0.0-beta.9+b5295ad",
+        "@angular/forms": "angular/forms-builds#8.0.0-beta.9-ivy-aot+a06f034",
         "@angular/material": "7.3.5",
-        "@angular/platform-browser": "angular/platform-browser-builds#8.0.0-beta.9+b5295ad",
-        "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds#8.0.0-beta.9+b5295ad",
+        "@angular/platform-browser": "angular/platform-browser-builds#8.0.0-beta.9-ivy-aot+a06f034",
+        "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds#8.0.0-beta.9-ivy-aot+a06f034",
         "@angular/router": "angular/router-builds#8.0.0-beta.9+b5295ad",
         "@ngrx/store": "7.3.0",
         "rxjs": "6.4.0",
@@ -24,9 +24,9 @@
         "zone.js": "0.9.0"
     },
     "devDependencies": {
-        "@angular/bazel": "angular/bazel-builds#8.0.0-beta.9+b5295ad",
+        "@angular/bazel": "angular/bazel-builds#8.0.0-beta.9-ivy-aot+a06f034",
         "@angular/compiler": "angular/compiler-builds#8.0.0-beta.9+b5295ad",
-        "@angular/compiler-cli": "angular/compiler-cli-builds#8.0.0-beta.9+b5295ad",
+        "@angular/compiler-cli": "angular/compiler-cli-builds#8.0.0-beta.9-ivy-aot+6cd3743",
         "@bazel/bazel": "0.23.2",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/buildifier": "0.22.0",
