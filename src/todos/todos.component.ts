@@ -7,7 +7,7 @@ import {ADD_TODO, DELETE_TODO, TOGGLE_DONE, UPDATE_TODO} from '../reducers/reduc
 @Component({
   selector: 'todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  styleUrls: ['./todos.component.scss']
 })
 export class TodosComponent implements OnInit {
   todos$: Observable<any>;

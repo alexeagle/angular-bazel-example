@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/alexeagle/angular-bazel-example.svg?style=svg)](https://circleci.com/gh/alexeagle/angular-bazel-example)
+[![CircleCI](https://circleci.com/gh/angular/angular-bazel-example.svg?style=svg)](https://circleci.com/gh/angular/angular-bazel-example)
 
 # Example of building an Angular app with Bazel
 
-**This is experimental! There may be breaking changes.**
+**This is experimental, as part of Angular Labs! There may be breaking changes.**
 
 This is part of the ABC project. The overall goal is to make it possible to
 develop Angular applications the same way we do at Google.
@@ -12,6 +12,18 @@ You can read the documentation in the wiki of this repository to understand how
 this works.
 
 Follow https://github.com/angular/angular/issues/19058 for updates.
+
+## Guide to the example
+
+This example is a monorepo, meant to show many different features and integrations that we expect are generally useful for enterprise use cases.
+
+- **Angular Libraries**: to maximize build incrementality, each Angular module is compiled as a separate step. This lets us re-use Angular libraries without having to publish them as npm packages. See `src/todos` for a typical `NgModule` compiled as a library for use in the application, using the `ng_module` rule in the `BUILD.bazel` file.
+- **TypeScript Libraries**: see `src/lib` for a trivial example of a pure-TS library that's consumed in the application, using the `ts_library` rule in the `BUILD.bazel` file.
+- **Sass**: we use Sass for all styling. Angular components import Sass files, and these are built by Bazel as independent processes calling the modern Sass compiler (written in Dart).
+- **Material design**: see `src/material` where we collect the material modules we use.
+- **Redux-style state management**: see `src/reducers` where we use the [NgRx Store](https://ngrx.io/guide/store).
+- **Lazy loading**: in production mode, the application is served in chunks.
+- **Docker**: see below where we package up the production app for deployment on Kubernetes.
 
 ## Installation
 
@@ -114,7 +126,12 @@ setup a local `node_modules` folder for editor and tooling support.
 
 ## Deployment
 
-Run it under docker:
+We use Bazel's docker support to package up our production server for deployment.
+Each time the app changes, we'll get a slim new docker layer with just the modified files, keeping the round-trip for deployment incremental and fast.
+This example is configured to run on Google Kubernetes Engine, so we can have an elastic pool of backend machines behind a load balancer.
+This setup is more expensive to operate than something like Firebase Functions where the backend code is spun up on-demand, but is also more adaptable to scenarios like backend servers that need to run other binaries on the machine.
+
+To run it under docker:
 
 ```
 $ bazel run src:nodejs_image -- --norun

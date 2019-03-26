@@ -6,6 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
+ /**
+  * @fileoverview these provide named UMD modules so that we can bundle
+  * the application along with rxjs using the concatjs bundler.
+  */
+
 // rxjs/operators
 (function(factory) {
 if (typeof module === 'object' && typeof module.exports === 'object') {
