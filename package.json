@@ -9,11 +9,11 @@
     },
     "dependencies": {
         "@angular/animations": "angular/animations-builds#8.0.0-beta.9+b5295ad",
-        "@angular/cdk": "7.3.5",
+        "@angular/cdk": "7.3.6",
         "@angular/common": "angular/common-builds#8.0.0-beta.9+b5295ad",
         "@angular/core": "angular/core-builds#8.0.0-beta.9+b5295ad",
         "@angular/forms": "angular/forms-builds#8.0.0-beta.9+b5295ad",
-        "@angular/material": "7.3.5",
+        "@angular/material": "7.3.6",
         "@angular/platform-browser": "angular/platform-browser-builds#8.0.0-beta.9+b5295ad",
         "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds#8.0.0-beta.9+b5295ad",
         "@angular/router": "angular/router-builds#8.0.0-beta.9+b5295ad",
