@@ -94,6 +94,7 @@ ts_devserver(
         "@npm//node_modules/@angular/cdk:bundles/cdk-a11y.umd.js",
         "@npm//node_modules/@angular/cdk:bundles/cdk-keycodes.umd.js",
         "@npm//node_modules/@angular/cdk:bundles/cdk-observers.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-scrolling.umd.js",
         "@npm//node_modules/@angular/common:bundles/common.umd.js",
         "@npm//node_modules/@angular/common:bundles/common-http.umd.js",
         "@npm//node_modules/@angular/core:bundles/core.umd.js",
@@ -104,6 +105,7 @@ ts_devserver(
         "@npm//node_modules/@angular/material:bundles/material-divider.umd.js",
         "@npm//node_modules/@angular/material:bundles/material-form-field.umd.js",
         "@npm//node_modules/@angular/material:bundles/material-list.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-sidenav.umd.js",
         "@npm//node_modules/@angular/material:bundles/material-toolbar.umd.js",
         "@npm//node_modules/@angular/material:bundles/material-icon.umd.js",
         "@npm//node_modules/@angular/material:bundles/material-input.umd.js",
@@ -117,6 +119,7 @@ ts_devserver(
         "@npm//node_modules/@angular/material:form-field/typings/index.ngfactory.js",
         "@npm//node_modules/@angular/material:icon/typings/index.ngfactory.js",
         "@npm//node_modules/@angular/material:list/typings/index.ngfactory.js",
+        "@npm//node_modules/@angular/material:sidenav/typings/index.ngfactory.js",
         "@npm//node_modules/@angular/material:toolbar/typings/index.ngfactory.js",
     ],
     # Serve these files in addition to the JavaScript bundle
@@ -143,6 +146,7 @@ rollup_bundle(
     # In the future, we could automatically gather these from statically
     # analyzing the Angular sources.
     additional_entry_points = [
+        "src/home.ngfactory",
         "src/hello-world/hello-world.module.ngfactory",
         "src/todos/todos.module.ngfactory",
     ],

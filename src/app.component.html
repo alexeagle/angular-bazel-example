@@ -1,26 +1,35 @@
 <nav>
-  <mat-toolbar class="mat-primary">
-    <a mat-button href="http://angular.io">
+  <mat-toolbar class="mat-secondary">
+    <p class="show-small"><button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button></p>
+    <a mat-button href="http://angular.io" class="hide-small">
       <img class="nav-logo" src="/images/angular-logo-with-text.svg">
     </a>
-    <div style="padding: 0.5em">+</div>
+    <span class="hide-small">+</span>
     <a mat-button href="https://bazel.build">
       <img class="nav-logo" src="/images/bazel-navbar.svg">
     </a>
-    <a mat-button routerLink="/" class="hide-small">Home</a>
-    <a mat-button routerLink="/todos" class="hide-small">Todos</a>
     <span class="flex-spacer"></span>
+    <a mat-button href="https://docs.bazel.build/versions/master/bazel-and-javascript.html">
+      Documentation
+    </a>
     <a href="https://github.com/angular/angular-bazel-example">
       <img class="nav-logo" src="/images/github-circle-white-transparent.svg">
     </a>
   </mat-toolbar>
-
-	<mat-toolbar class="mat-primary show-small mobile-nav">
-    <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="/todos">Todos</a>
-	</mat-toolbar>
 </nav>
 
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
+<mat-drawer-container>
+  <mat-drawer #drawer opened mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/"> Home </a>
+      <a mat-list-item routerLink="/hello"> Hello World </a>
+      <a mat-list-item routerLink="/todos"> Todos </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

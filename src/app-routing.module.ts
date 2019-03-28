@@ -7,6 +7,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    loadChildren: () => import('./home.ngfactory').then(m => m.HomeModuleNgFactory)
+  },
+  {
+    path: 'hello',
+    pathMatch: 'full',
     loadChildren: () =>
         import('./hello-world/hello-world.module.ngfactory').then(m => m.HelloWorldModuleNgFactory)
   },
@@ -18,7 +23,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
+  imports:
+      [RouterModule.forRoot(routes, {enableTracing: true, preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
