@@ -39,7 +39,7 @@
         "core-js": "2.6.5",
         "husky": "0.14.3",
         "protractor": "6.0.0",
-        "typescript": "3.3.3333"
+        "typescript": "3.4.1"
     },
     "scripts": {
         "build": "bazel build //src:bundle",
