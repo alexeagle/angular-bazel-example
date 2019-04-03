@@ -125,6 +125,9 @@ ts_web_test_suite(
         "@npm//node_modules/date-fns:date-fns.umd.js",
         "@npm//node_modules/tslib:tslib.js",
     ],
+    runtime_deps = [
+      "//src:initialize_testbed",
+    ],
     # do not sort
     bootstrap = [
         "@npm//node_modules/zone.js:dist/zone-testing-bundle.js",
