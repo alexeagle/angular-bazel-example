@@ -20,11 +20,74 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('./todos/todos.module.ngfactory').then(m => m.TodosModuleNgFactory)
   },
+  {
+    path: 'billing',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./billing/billing.module.ngfactory').then(m => m.BillingModuleNgFactory)
+  },
+  {
+    path: 'compute',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./compute/compute.module.ngfactory').then(m => m.ComputeModuleNgFactory)
+  },
+  {
+    path: 'datastore',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./datastore/datastore.module.ngfactory').then(m => m.DatastoreModuleNgFactory)
+  },
+  {
+    path: 'functions',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./functions/functions.module.ngfactory').then(m => m.FunctionsModuleNgFactory)
+  },
+  {
+    path: 'logging',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./logging/logging.module.ngfactory').then(m => m.LoggingModuleNgFactory)
+  },
+  {
+    path: 'monitoring',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./monitoring/monitoring.module.ngfactory').then(m => m.MonitoringModuleNgFactory)
+  },
+  {
+    path: 'networking',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./networking/networking.module.ngfactory').then(m => m.NetworkingModuleNgFactory)
+  },
+  {
+    path: 'registry',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./registry/registry.module.ngfactory').then(m => m.RegistryModuleNgFactory)
+  },
+  {
+    path: 'storage',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./storage/storage.module.ngfactory').then(m => m.StorageModuleNgFactory)
+  },
+  {
+    path: 'support',
+    pathMatch: 'full',
+    loadChildren: () =>
+        import('./support/support.module.ngfactory').then(m => m.SupportModuleNgFactory)
+  },
 ];
 
 @NgModule({
-  imports:
-      [RouterModule.forRoot(routes, {enableTracing: true, preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(routes, {
+    // TODO: maybe set this based on devmode?
+    enableTracing: true,
+    // preloadingStrategy: PreloadAllModules,
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
