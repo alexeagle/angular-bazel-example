@@ -14,6 +14,20 @@ html, body {
   }
 }
 
+app-component {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+mat-drawer-container {
+	flex: 1;
+}
+
 nav > .mat-toolbar {
 	background: $theme-secondary;
 	color: #fff;
@@ -49,6 +63,10 @@ nav > .mat-toolbar {
 
 .mat-card {
 	margin: 1em;
+}
+
+mat-drawer mat-nav-list .mat-icon {
+	margin-right: 0.5em;
 }
 
 h1 {
