@@ -4,7 +4,7 @@ load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
 load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 load("@npm_angular_bazel//:index.bzl", "ng_module")
-load("@npm_bazel_typescript//:defs.bzl", "ts_config", "ts_library", "ts_devserver")
+load("@npm_bazel_typescript//:defs.bzl", "ts_config", "ts_devserver", "ts_library")
 
 package(default_visibility = ["//:__subpackages__"])
 
@@ -28,7 +28,6 @@ NG_FACTORY_ADDED_IMPORTS = [
     "@npm//@angular/material",
     "@npm//@angular/forms",
 ]
-
 
 ts_library(
     name = "initialize_testbed",

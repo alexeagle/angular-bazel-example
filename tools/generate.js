@@ -1,6 +1,6 @@
 /**
  * Generate lots of "feature" code to bulk out this example to a given size.
- * By default we generate 90 components and check that in.
+ * By default we generate 40 components and check that in.
  * You can generate more by passing arguments, for example
  * yarn generate 10 10
  * will make 1000 components total: for each of the ten "features", it will have 10 modules, each
@@ -22,8 +22,8 @@ const featureNames = [
   'support',
 ];
 
-const modulesPerFeature = process.argv[2] || 3;
-const componentsPerModule = process.argv[3] || 3;
+const modulesPerFeature = process.argv[2] || 2;
+const componentsPerModule = process.argv[3] || 2;
 let globalCmpIdx = 0;
 
 function ng(...args) {
@@ -54,6 +54,8 @@ function makeFeatureModule(name) {
       selectorAcc.push(`app-cmp${globalCmpIdx}`);
       globalCmpIdx++;
     }
+
+    // Write a BUILD file to build the module
     fs.writeFileSync(`src/app/${name}/module${modIdx}/BUILD.bazel`, `
 # Generated BUILD file, see /tools/generate.js
 load("@npm_angular_bazel//:index.bzl", "ng_module")
@@ -138,11 +140,15 @@ ts_web_test_suite(
 )
         `);
   }
+
+  // Reference all the component selectors in the feature module's index component
   fs.writeFileSync(
       `src/app/${name}/index/index.component.html`,
       selectorAcc.map(s => `<${s}></${s}>`).join('\n'));
   const originalFeatureModuleContent =
       fs.readFileSync(`src/app/${name}/${name}.module.ts`, {encoding: 'utf-8'});
+
+  // Wire up routing for the feature module
   fs.writeFileSync(
       `src/app/${name}/${name}.module.ts`,
       originalFeatureModuleContent
@@ -152,6 +158,7 @@ RouterModule.forChild([{path: '', component: IndexComponent}]),`)
               `from '@angular/common';`,
               `from '@angular/common';\nimport { RouterModule } from '@angular/router';`));
 
+  // Write a BUILD file to build the feature module
   fs.writeFileSync(`src/app/${name}/BUILD.bazel`, `
 # Generated BUILD file, see /tools/generate.js
 load("@npm_angular_bazel//:index.bzl", "ng_module")

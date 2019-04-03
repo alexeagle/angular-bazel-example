@@ -125,9 +125,6 @@ ts_web_test_suite(
         "@npm//node_modules/date-fns:date-fns.umd.js",
         "@npm//node_modules/tslib:tslib.js",
     ],
-    runtime_deps = [
-      "//src:initialize_testbed",
-    ],
     # do not sort
     bootstrap = [
         "@npm//node_modules/zone.js:dist/zone-testing-bundle.js",
@@ -138,6 +135,9 @@ ts_web_test_suite(
         # TODO(gregmagolan): re-enable firefox testing once fixed
         # See https://github.com/bazelbuild/rules_typescript/issues/296
         #"@io_bazel_rules_webtesting//browsers:firefox-local",
+    ],
+    runtime_deps = [
+        "//src:initialize_testbed",
     ],
     deps = [
         ":test_lib",

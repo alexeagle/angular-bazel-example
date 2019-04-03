@@ -1,0 +1,89 @@
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+# Generated BUILD file, see /tools/generate.js
+load("@npm_angular_bazel//:index.bzl", "ng_module")
+load("@npm_bazel_karma//:defs.bzl", "ts_web_test_suite")
+load("@npm_bazel_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//:__subpackages__"])
+
+sass_binary(
+    name = "module0_styles",
+    src = "cmp16/cmp16.component.scss",
+)
+
+sass_binary(
+    name = "module1_styles",
+    src = "cmp17/cmp17.component.scss",
+)
+
+ng_module(
+    name = "module0",
+    srcs = [
+        "cmp16/cmp16.component.ts",
+        "cmp17/cmp17.component.ts",
+        "module0.module.ts",
+    ],
+    assets = [
+        ":module0_styles",
+        ":module1_styles",
+        "cmp16/cmp16.component.html",
+        "cmp17/cmp17.component.html",
+    ],
+    tsconfig = "//src:tsconfig.json",
+    deps = [
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+    ],
+)
+
+ts_library(
+    name = "test_lib",
+    testonly = 1,
+    srcs = glob(["**/*.spec.ts"]),
+    tsconfig = "//src:tsconfig-test",
+    deps = [
+        ":module0",
+        "@npm//@angular/core",
+        "@npm//@angular/platform-browser",
+        "@npm//@angular/platform-browser-dynamic",
+        "@npm//@types/jasmine",
+        "@npm//@types/node",
+    ],
+)
+
+ts_web_test_suite(
+    name = "test",
+    srcs = [
+        "@npm//node_modules/@angular/common:bundles/common.umd.js",
+        "@npm//node_modules/@angular/common:bundles/common-http.umd.js",
+        "@npm//node_modules/@angular/common:common.ngsummary.js",
+        "@npm//node_modules/@angular/compiler:bundles/compiler.umd.js",
+        "@npm//node_modules/@angular/compiler:bundles/compiler-testing.umd.js",
+        "@npm//node_modules/@angular/core:bundles/core.umd.js",
+        "@npm//node_modules/@angular/core:bundles/core-testing.umd.js",
+        "@npm//node_modules/@angular/platform-browser:bundles/platform-browser.umd.js",
+        "@npm//node_modules/@angular/platform-browser:bundles/platform-browser-testing.umd.js",
+        "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic.umd.js",
+        "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic-testing.umd.js",
+        "@npm//node_modules/tslib:tslib.js",
+    ],
+    # do not sort
+    bootstrap = [
+        "@npm//node_modules/zone.js:dist/zone-testing-bundle.js",
+        "@npm//node_modules/reflect-metadata:Reflect.js",
+    ],
+    browsers = [
+        "@io_bazel_rules_webtesting//browsers:chromium-local",
+        # TODO(gregmagolan): re-enable firefox testing once fixed
+        # See https://github.com/bazelbuild/rules_typescript/issues/296
+        #"@io_bazel_rules_webtesting//browsers:firefox-local",
+    ],
+    runtime_deps = [
+        "//src:initialize_testbed",
+    ],
+    deps = [
+        ":test_lib",
+        "//src:rxjs_umd_modules",
+    ],
+)

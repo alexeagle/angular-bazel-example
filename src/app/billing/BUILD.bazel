@@ -1,0 +1,23 @@
+# Generated BUILD file, see /tools/generate.js
+load("@npm_angular_bazel//:index.bzl", "ng_module")
+
+package(default_visibility = ["//:__subpackages__"])
+
+ng_module(
+    name = "billing",
+    srcs = [
+        "billing.module.ts",
+        "index/index.component.ts",
+    ],
+    assets = [
+        "index/index.component.html",
+    ],
+    tsconfig = "//src:tsconfig.json",
+    deps = [
+        "//src/app/billing/module0",
+        "//src/app/billing/module1",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/router",
+    ],
+)
