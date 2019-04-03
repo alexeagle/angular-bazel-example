@@ -1,3 +1,11 @@
+/**
+ * Generate lots of "feature" code to bulk out this example to a given size.
+ * By default we generate 90 components and check that in.
+ * You can generate more by passing arguments, for example
+ * yarn generate 10 10
+ * will make 1000 components total: for each of the ten "features", it will have 10 modules, each
+ * has 10 components.
+ */
 const {spawnSync} = require('child_process');
 const fs = require('fs');
 
@@ -14,9 +22,8 @@ const featureNames = [
   'support',
 ];
 
-// TODO: parameterize?
-const modulesPerFeature = 1    // 10;
-const componentsPerModule = 1  // 10;
+const modulesPerFeature = process.argv[2] || 3;
+const componentsPerModule = process.argv[3] || 3;
 let globalCmpIdx = 0;
 
 function ng(...args) {
@@ -28,6 +35,8 @@ function makeFeatureModule(name) {
   ng('generate', 'component', `${name}/index`, '--module', `${name}`, '--inlineStyle=true');
 
   const featureModuleDeps = [];
+  const selectorAcc = [];
+
   for (let modIdx = 0; modIdx < modulesPerFeature; modIdx++) {
     ng('generate', 'module', `${name}/module${modIdx}`, '--module', name);
 
@@ -35,7 +44,6 @@ function makeFeatureModule(name) {
     const tsFileAcc = [];
     const scssFileAcc = [];
     const htmlFileAcc = [];
-    const selectorAcc = [];
 
     for (let cmpIdx = 0; cmpIdx < componentsPerModule; cmpIdx++) {
       ng('generate', 'component', `${name}/module${modIdx}/cmp${globalCmpIdx}`, '--module',
@@ -46,19 +54,6 @@ function makeFeatureModule(name) {
       selectorAcc.push(`app-cmp${globalCmpIdx}`);
       globalCmpIdx++;
     }
-    fs.writeFileSync(
-        `src/app/${name}/index/index.component.html`,
-        selectorAcc.map(s => `<${s}></${s}>`).join('\n'));
-    const originalFeatureModuleContent =
-        fs.readFileSync(`src/app/${name}/${name}.module.ts`, {encoding: 'utf-8'});
-    fs.writeFileSync(
-        `src/app/${name}/${name}.module.ts`,
-        originalFeatureModuleContent
-            .replace('CommonModule,', `CommonModule,
-    RouterModule.forChild([{path: '', component: IndexComponent}]),`)
-            .replace(
-                `from '@angular/common';`,
-                `from '@angular/common';\nimport { RouterModule } from '@angular/router';`));
     fs.writeFileSync(`src/app/${name}/module${modIdx}/BUILD.bazel`, `
 # Generated BUILD file, see /tools/generate.js
 load("@npm_angular_bazel//:index.bzl", "ng_module")
@@ -143,6 +138,20 @@ ts_web_test_suite(
 )
         `);
   }
+  fs.writeFileSync(
+      `src/app/${name}/index/index.component.html`,
+      selectorAcc.map(s => `<${s}></${s}>`).join('\n'));
+  const originalFeatureModuleContent =
+      fs.readFileSync(`src/app/${name}/${name}.module.ts`, {encoding: 'utf-8'});
+  fs.writeFileSync(
+      `src/app/${name}/${name}.module.ts`,
+      originalFeatureModuleContent
+          .replace('CommonModule,', `CommonModule,
+RouterModule.forChild([{path: '', component: IndexComponent}]),`)
+          .replace(
+              `from '@angular/common';`,
+              `from '@angular/common';\nimport { RouterModule } from '@angular/router';`));
+
   fs.writeFileSync(`src/app/${name}/BUILD.bazel`, `
 # Generated BUILD file, see /tools/generate.js
 load("@npm_angular_bazel//:index.bzl", "ng_module")
