@@ -42,7 +42,7 @@
         "core-js": "2.6.5",
         "husky": "0.14.3",
         "named-amd": "1.0.0",
-        "protractor": "6.0.0",
+        "protractor": "6.0.0-beta",
         "typescript": "3.3.3333"
     },
     "scripts": {
