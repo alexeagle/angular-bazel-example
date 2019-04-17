@@ -106,7 +106,7 @@ nodejs_image_repos()
 
 git_repository(
     name = "io_bazel_rules_k8s",
-    commit = "d72491924369868a13532af9f15cb766e5943855",
+    commit = "18e4d462ab2b92a687ae324ee8a426fbb8010ed5",
     remote = "https://github.com/bazelbuild/rules_k8s.git",
     shallow_since = "1545317854 -0500",
 )
