@@ -16,7 +16,7 @@ var_2: &job_defaults
   docker:
     # Use the -browsers version just to get the right .so files on the disk
     # We'll actually download a chromium version under the rules_webtesting
-    - image: circleci/node:10.12-browsers
+    - image: circleci/node:10.15-browsers
 
 # After checkout, rebase on top of master, because we want to test the proposed merge of a
 # onto the target branch, not just test what's on the user's fork.
@@ -32,7 +32,7 @@ version: 2
 jobs:
   lint:
     docker:
-      - image: circleci/node:10.12
+      - image: circleci/node:10.15
     steps:
       - checkout:
           <<: *post_checkout
