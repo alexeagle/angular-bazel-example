@@ -108,7 +108,7 @@ ts_devserver(
     # Start from the development version of the main
     entry_module = "angular_bazel_example/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
-    index_html = "index.html",
+    index_html = "//src/example:assets",
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
@@ -174,7 +174,7 @@ web_package(
     # do not sort
     assets = _ASSETS + [
         # For differential loading, we supply both an ESModule entry point and an es5 entry point
-        # The injector will put two complimentary script tags in the index.html
+        # The injector will put two complimentary script tags in the example.html
         ":bundle.min.js",
         ":bundle.min.es2015.js",
     ],
@@ -184,9 +184,10 @@ web_package(
         # Include polyfills that will be requested by old browsers
         "@npm//node_modules/systemjs:dist/system.js",
         "@npm//node_modules/core-js:client/core.min.js",
+        "index.html",
     ],
     # <script> and <link> tags will be automatically injected into this index.
-    index_html = "index.html",
+    index_html = "//src/example:assets",
 )
 
 history_server(
