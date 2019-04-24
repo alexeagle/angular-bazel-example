@@ -2743,7 +2743,7 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-firebase-tools@^6.7.1:
+firebase-tools@6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.7.1.tgz#c80ddc9cfd6ca6611b50e3e656f8bee30621c6f3"
   integrity sha512-8JZ2QA1gylgmlGNULrhTtkk5iS+OumCoJEgK+RNLt/ji1hSxzZehWCb13jHtqCRNRz+Kt+uwsrmExbhsNNqiBw==
@@ -6994,7 +6994,7 @@ try-require@^1.0.0:
   resolved "https://registry.yarnpkg.com/try-require/-/try-require-1.2.1.tgz#34489a2cac0c09c1cc10ed91ba011594d4333be2"
   integrity sha1-NEiaLKwMCcHMEO2RugEVlNQzO+I=
 
-ts-morph@^1.3.3:
+ts-morph@1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/ts-morph/-/ts-morph-1.3.3.tgz#ce4026699691db9bd297c039189f0fe4cc0fac4b"
   integrity sha512-TO4xmC4yKSoOSjuIGBlYOkPSQhY4dC6/8ksEH+1jlt7XUk6fmLshn97wwchMQxz1ejSd2DSxEk+pC5cqDYlUzg==
