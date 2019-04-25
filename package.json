@@ -34,7 +34,7 @@
         "@bazel/buildifier": "0.22.0",
         "@bazel/ibazel": "0.10.1",
         "@bazel/karma": "0.28.0",
-        "@bazel/typescript": "0.27.10",
+        "@bazel/typescript": "0.28.0",
         "@types/jasmine": "3.3.12",
         "@types/node": "6.14.5",
         "browserify": "16.2.3",
