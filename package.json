@@ -39,7 +39,7 @@
         "@types/node": "6.14.5",
         "browserify": "16.2.3",
         "clang-format": "1.2.4",
-        "core-js": "2.6.5",
+        "core-js": "3.0.1",
         "firebase-tools": "6.7.1",
         "husky": "0.14.3",
         "named-amd": "1.0.0",
