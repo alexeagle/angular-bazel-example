@@ -1,15 +1,20 @@
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8594346-33"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-8594346-33"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-8594346-33');
+      gtag("config", "UA-8594346-33");
     </script>
-    
+
     <meta charset="utf-8" />
     <title>ABC: Angular Buildtools Convergence</title>
     <base href="/" />
@@ -119,46 +124,15 @@
             <div class="mat-button-focus-overlay"></div
           ></a>
         </nav>
-        <nav _ngcontent-c1="" class="docs-navbar docs-navbar-show-small">
-          <!----><a
-            _ngcontent-c1=""
-            class="docs-navbar-link mat-button ng-star-inserted"
-            mat-button=""
-            tabindex="0"
-            aria-disabled="false"
-            href="/components"
-            ><span class="mat-button-wrapper">Components</span>
-            <div class="mat-button-ripple mat-ripple" matripple=""></div>
-            <div class="mat-button-focus-overlay"></div></a
-          ><a
-            _ngcontent-c1=""
-            class="docs-navbar-link mat-button ng-star-inserted"
-            mat-button=""
-            tabindex="0"
-            aria-disabled="false"
-            href="/cdk"
-            ><span class="mat-button-wrapper">CDK</span>
-            <div class="mat-button-ripple mat-ripple" matripple=""></div>
-            <div class="mat-button-focus-overlay"></div></a
-          ><a
-            _ngcontent-c1=""
-            class="docs-navbar-link mat-button"
-            mat-button=""
-            routerlink="guides"
-            tabindex="0"
-            aria-disabled="false"
-            href="/guides"
-            ><span class="mat-button-wrapper">Guides</span>
-            <div class="mat-button-ripple mat-ripple" matripple=""></div>
-            <div class="mat-button-focus-overlay"></div
-          ></a></nav
-      ></app-navbar>
+      </app-navbar>
       <app-homepage _nghost-c9="" class="ng-star-inserted"
         ><header _ngcontent-c9="" class="docs-header-background">
           <div _ngcontent-c9="" class="docs-header-section">
             <div _ngcontent-c9="" class="docs-header-headline">
               <h1 _ngcontent-c9="" class="mat-h1">Angular and Bazel</h1>
-              <h2 _ngcontent-c9="">Build and test Angular applications at scale like Google</h2>
+              <h2 _ngcontent-c9="">
+                Build and test Angular applications at scale like Google
+              </h2>
             </div>
             <div _ngcontent-c9="" class="docs-header-start">
               <a
@@ -496,149 +470,225 @@
               <p _ngcontent-c9="">
                 Not a stable, supported API, so use Bazel with caution in
                 production applications. We expect to promote it to stable for
-                Angular 9.0.
+                Angular version 9.
               </p>
             </div>
           </div>
-          <div _ngcontent-c9="" class="docs-homepage-bottom-start" style="text-align: left">
-            <h2>Resources</h2>
-            <ul>Projects
-              <li><a href="https://groups.google.com/forum/#!forum/rbe-alpha-customers">Remote Build Execution for Google Cloud Platform</a></li>
-              <li><a 
-                href="https://github.com/bazelbuild/bazel-buildfarm"
-                >On-prem Bazel remote caching and execution service</a></li>
-              
-                <li><a href="https://github.com/jin/awesome-bazel">A curated list of Bazel rules, tooling and resources</a></li>
+          <div
+            _ngcontent-c9=""
+            class="docs-homepage-bottom-start"
+            style="text-align: left"
+          >
+            <h2>📚 Resources</h2>
+            <h3>Projects</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://groups.google.com/forum/#!forum/rbe-alpha-customers"
+                  >Remote Build Execution for Google Cloud Platform</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/bazelbuild/bazel-buildfarm"
+                  >On-prem Bazel remote caching and execution service</a
+                >
+              </li>
+
+              <li>
+                <a href="https://github.com/jin/awesome-bazel"
+                  >A curated list of Bazel rules, tooling and resources</a
+                >
+              </li>
             </ul>
 
-            <ul>Talks 
-                <li>Building Apps Like Google with Angular, Bazel, and GCP
-                  <a href="https://www.youtube.com/watch?v=lDyIc2Abkwg">Video</a>
-                  (Google Cloud Next, April 2019)
-                </li>
+            <h3>Talks</h3>
+            <ul>
+              <li>
+                Building Apps Like Google with Angular, Bazel, and GCP
+                <a href="https://www.youtube.com/watch?v=lDyIc2Abkwg">Video</a>
+                (Google Cloud Next, April 2019)
+              </li>
 
-                <li>Layering in JS tooling
-                  <a href="https://hackmd.io/p/HJZ_ekxuN">Slides</a>
-                  <a href="https://drive.google.com/file/d/1AxrwjLUf_35Z2C9VK5Ut7wo5L89roHH2/view">Video</a>
-                  (ModernWeb Meetup, March 2019)
-                </li>
+              <li>
+                Layering in JS tooling
+                <a href="https://hackmd.io/p/HJZ_ekxuN">Slides</a>
+                <a
+                  href="https://drive.google.com/file/d/1AxrwjLUf_35Z2C9VK5Ut7wo5L89roHH2/view"
+                  >Video</a
+                >
+                (ModernWeb Meetup, March 2019)
+              </li>
 
-                <li>Angular, Bazel, and CLI
-                  <a href="https://docs.google.com/presentation/d/1weKiN44mj02uriWMnpVm-CYDVTjP-NT2nYmZe3ii4X0/preview">Slides</a>
-                  (AngularSF Meetup, January 2019)
-                </li>
+              <li>
+                Angular, Bazel, and CLI
+                <a
+                  href="https://docs.google.com/presentation/d/1weKiN44mj02uriWMnpVm-CYDVTjP-NT2nYmZe3ii4X0/preview"
+                  >Slides</a
+                >
+                (AngularSF Meetup, January 2019)
+              </li>
 
-                <li>Bazel in Angular CLI
-                  <a href="https://www.youtube.com/watch?v=fEUgZopCK8E">Video</a>
-                  <a href="https://docs.google.com/presentation/d/1VcSkWDFkmkZKCP9yTfKbq-lTMU3qW_3zNabKItCWDec/preview">Slides</a>
-                  (AngularNYC Meetup, January 2019)
-                </li>
+              <li>
+                Bazel in Angular CLI
+                <a href="https://www.youtube.com/watch?v=fEUgZopCK8E">Video</a>
+                <a
+                  href="https://docs.google.com/presentation/d/1VcSkWDFkmkZKCP9yTfKbq-lTMU3qW_3zNabKItCWDec/preview"
+                  >Slides</a
+                >
+                (AngularNYC Meetup, January 2019)
+              </li>
 
-                <li>The CLI Roadmap
-                  <a href="ttps://www.youtube.com/watch?v=tUCd6QSzEy4">Video</a>
-                  (AngularConnect, November 2018)
-                </li>
+              <li>
+                The CLI Roadmap
+                <a href="ttps://www.youtube.com/watch?v=tUCd6QSzEy4">Video</a>
+                (AngularConnect, November 2018)
+              </li>
 
-                <li>Develop Angular like Google Does
-                  <a href="https://docs.google.com/presentation/d/1b0PdG-bxN0nwHa3ZuA0a_anOEYeMoI_CSsZl6ngZWp8/preview?slide=id.g26d86d3325_0_0">Slides</a>
-                  (AngularMIX, October 2018)
-                </li>
+              <li>
+                Develop Angular like Google Does
+                <a
+                  href="https://docs.google.com/presentation/d/1b0PdG-bxN0nwHa3ZuA0a_anOEYeMoI_CSsZl6ngZWp8/preview?slide=id.g26d86d3325_0_0"
+                  >Slides</a
+                >
+                (AngularMIX, October 2018)
+              </li>
 
-                <li>Building large Angular apps with Bazel
-                  <a href="https://docs.google.com/presentation/d/1ZIKO07h9fFAyJnMGK-TE3Tr-NXi-9jOYEaQDXcIMZ-A/preview">Slides</a>
-                  <a href="https://www.youtube.com/watch?v=yBg9zG6ZGb4">Video</a>
-                  (BazelCon, October 2018)
-                </li>
+              <li>
+                Building large Angular apps with Bazel
+                <a
+                  href="https://docs.google.com/presentation/d/1ZIKO07h9fFAyJnMGK-TE3Tr-NXi-9jOYEaQDXcIMZ-A/preview"
+                  >Slides</a
+                >
+                <a href="https://www.youtube.com/watch?v=yBg9zG6ZGb4">Video</a>
+                (BazelCon, October 2018)
+              </li>
 
-                <li>How I love being ejected
-                  <a href="https://goo.gl/Szcnfk">Slides</a>
-                  <a href="https://www.youtube.com/watch?v=ieRJwFGWEOM">Video</a>
-                  (ng-conf, April 2018)
-                </li>
-                <li>Angular Libraries in Bazel <a 
+              <li>
+                How I love being ejected
+                <a href="https://goo.gl/Szcnfk">Slides</a>
+                <a href="https://www.youtube.com/watch?v=ieRJwFGWEOM">Video</a>
+                (ng-conf, April 2018)
+              </li>
+              <li>
+                Angular Libraries in Bazel
+                <a
                   href="https://docs.google.com/presentation/d/1SU3rjpj8YEAyLAhHJwtO7TR1d_Sx1e9iGI3osiasPhA/preview "
-                  >Slides</a>
-                  (AngularSF Meetup, April 2018)
-                </li>
+                  >Slides</a
+                >
+                (AngularSF Meetup, April 2018)
+              </li>
 
-                <li>Bazel for building Angular Applications <a 
-                  href="https://www.youtube.com/watch?v=KmaE6z_ECRg "
-                  >Video</a> (St. Louis Angular Lunch, February 2018)</li>
+              <li>
+                Bazel for building Angular Applications
+                <a href="https://www.youtube.com/watch?v=KmaE6z_ECRg ">Video</a>
+                (St. Louis Angular Lunch, February 2018)
+              </li>
 
-
-                <li>Building Angular Applications like Google <a 
+              <li>
+                Building Angular Applications like Google
+                <a
                   href="https://docs.google.com/presentation/d/1EudIzQvz9gzVPr0UdP1DymlbhfG29kFCeiJVVEE_FVw/preview"
-                  >Slides</a>
-                  <a 
-                  href="https://www.youtube.com/watch?v=CeUF9hjdoZQ"
-                  >Video</a> (AngularConnect, November 2017)</li>
+                  >Slides</a
+                >
+                <a href="https://www.youtube.com/watch?v=CeUF9hjdoZQ">Video</a>
+                (AngularConnect, November 2017)
+              </li>
 
+              <li>
+                Bazel for Web Frontends
+                <a href="https://goo.gl/ebcPXi">Slides</a>
+                <a href="https://www.youtube.com/watch?v=0pgERydGyqo">Video</a>
+                (BazelCon November 2017)
+              </li>
 
-                <li>Bazel for Web Frontends <a 
-                  href="https://goo.gl/ebcPXi"
-                  >Slides</a>
-                  <a 
-                  href="https://www.youtube.com/watch?v=0pgERydGyqo"
-                  >Video</a> (BazelCon November 2017)</li>
-
-              
-                <li>Angular with Bazel and Closure <a 
+              <li>
+                Angular with Bazel and Closure
+                <a
                   href="https://docs.google.com/presentation/d/1gFta6MSrafNap4YFA6SfL8uRKJMsQlZ8RsZj8RJ0_6k/preview"
-                  >Slides</a>
-                  <a 
-                  href="https://www.youtube.com/watch?v=tnKyXH_5028"
-                  >Video</a> (AngularMIX October 2017)</li>
+                  >Slides</a
+                >
+                <a href="https://www.youtube.com/watch?v=tnKyXH_5028">Video</a>
+                (AngularMIX October 2017)
+              </li>
             </ul>
-            <ul>Articles
-              <li><a href="https://medium.com/@Jakeherringbone/automated-testing-of-each-commit-ci-6f718d93d0da">
-                Automated testing of each commit != CI
+            <h3>Articles</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://medium.com/@Jakeherringbone/automated-testing-of-each-commit-ci-6f718d93d0da"
+                >
+                  Automated testing of each commit != CI
                 </a>
                 (January 2019)
               </li>
-              <li><a href="https://medium.com/@Jakeherringbone/running-tools-under-bazel-8aa416e7090c">
-                Running tools under Bazel
+              <li>
+                <a
+                  href="https://medium.com/@Jakeherringbone/running-tools-under-bazel-8aa416e7090c"
+                >
+                  Running tools under Bazel
                 </a>
                 (November 2018)
               </li>
 
-              <li><a href="https://medium.com/@Jakeherringbone/multiple-npm-packages-in-a-bazel-monorepo-5072f2aebdb2">
-                Multiple npm packages in a Bazel monorepo
+              <li>
+                <a
+                  href="https://medium.com/@Jakeherringbone/multiple-npm-packages-in-a-bazel-monorepo-5072f2aebdb2"
+                >
+                  Multiple npm packages in a Bazel monorepo
                 </a>
                 (March 2018)
               </li>
 
-              <li><a href="https://medium.com/@Jakeherringbone/deploying-an-angular-app-to-kubernetes-using-bazel-preview-91432b8690b5">
-                Deploying an Angular app to Kubernetes using Bazel (preview)
+              <li>
+                <a
+                  href="https://medium.com/@Jakeherringbone/deploying-an-angular-app-to-kubernetes-using-bazel-preview-91432b8690b5"
+                >
+                  Deploying an Angular app to Kubernetes using Bazel (preview)
                 </a>
                 (January 2018)
               </li>
 
               <li>
-                <a href="https://medium.com/dailyjs/building-angular-apps-at-scale-813ef42add04">
-                  Building Angular apps at Scale</a>
-                  (August 2017)
+                <a
+                  href="https://medium.com/dailyjs/building-angular-apps-at-scale-813ef42add04"
+                >
+                  Building Angular apps at Scale</a
+                >
+                (August 2017)
               </li>
-              
+
               <li>
-                <a 
-                href="https://medium.com/@Jakeherringbone/what-angular-is-doing-with-bazel-and-closure-21f526f64a34"
-                >What Angular is doing with Bazel and Closure</a>
+                <a
+                  href="https://medium.com/@Jakeherringbone/what-angular-is-doing-with-bazel-and-closure-21f526f64a34"
+                  >What Angular is doing with Bazel and Closure</a
+                >
                 (April 2017)
-              </li>                
+              </li>
             </ul>
-            <ul>Trainings
-              <li>Bazel Training for Angular Team
-                <a href="https://docs.google.com/presentation/d/1OwktccLvV3VvWn3i7H2SuZkBeAQ8z-E5RdJODVLf8SA/preview">Slides</a>
+
+            <h3>Trainings</h3>
+            <ul>
+              <li>
+                Bazel Training for Angular Team
+                <a
+                  href="https://docs.google.com/presentation/d/1OwktccLvV3VvWn3i7H2SuZkBeAQ8z-E5RdJODVLf8SA/preview"
+                  >Slides</a
+                >
                 (January 2019)
               </li>
 
-              <li>Full Stack development with Nx and Bazel
-                <a href="https://docs.google.com/presentation/d/1fSZwcpO9hUBFd_k9hUS45ZyVJcZLEyz0VxISSOnIZ1I/preview">Slides</a>
+              <li>
+                Full Stack development with Nx and Bazel
+                <a
+                  href="https://docs.google.com/presentation/d/1fSZwcpO9hUBFd_k9hUS45ZyVJcZLEyz0VxISSOnIZ1I/preview"
+                  >Slides</a
+                >
                 <a href="https://www.youtube.com/watch?v=1KDDIhcQORM">Video</a>
                 (ng-conf, April 2018)
               </li>
 
-              <li>ABC Deep Dive tech talk
+              <li>
+                ABC Deep Dive tech talk
                 <a href="https://goo.gl/zDYWsq">Slides</a>
                 <a href="https://youtu.be/z9Q_2N9oaG8">Video</a>
                 (February 2018)
@@ -676,12 +726,5 @@
         ></app-homepage
       ></material-docs-app
     >
-    <div
-      id="cdk-describedby-message-container"
-      aria-hidden="true"
-      style="display: none;"
-    >
-      <div id="cdk-describedby-message-0">Select a theme!</div>
-    </div>
   </body>
 </html>

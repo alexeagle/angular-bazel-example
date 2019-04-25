@@ -14,21 +14,18 @@ app-navbar {
   right: 0;
   z-index: 2;
 }
-
 material-docs-app > app-guides,
 material-docs-app > app-homepage,
 material-docs-app > guide-viewer {
   overflow-y: auto;
   margin-top: -4px;
 }
-
 .docs-navbar-header[_ngcontent-c1] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 8px 16px;
 }
-
 .flex-spacer[_ngcontent-c1] {
   flex-grow: 1;
 }
@@ -37,17 +34,14 @@ material-docs-app > guide-viewer {
   margin: 0 4px 3px 0;
   vertical-align: middle;
 }
-
 .docs-navbar[_ngcontent-c1],
 .docs-navbar-show-small[_ngcontent-c1] {
   display: none;
 }
-
 .mat-button .mat-button-focus-overlay,
 .mat-icon-button .mat-button-focus-overlay {
   opacity: 0;
 }
-
 .mat-button,
 .mat-flat-button,
 .mat-icon-button,
@@ -74,7 +68,6 @@ material-docs-app > guide-viewer {
   border-radius: 4px;
   overflow: visible;
 }
-
 .mat-raised-button {
   box-sizing: border-box;
   position: relative;
@@ -101,7 +94,6 @@ material-docs-app > guide-viewer {
   transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
     box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .mat-icon-button {
   padding: 0;
   min-width: 0;
@@ -130,7 +122,6 @@ material-docs-app > guide-viewer {
   transition: opacity 0.2s cubic-bezier(0.35, 0, 0.25, 1),
     background-color 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
-
 .mat-button-ripple-round {
   border-radius: 50%;
   z-index: 1;
@@ -144,7 +135,6 @@ material-docs-app > guide-viewer {
 .mat-stroked-button .mat-button-wrapper > * {
   vertical-align: middle;
 }
-
 .mat-icon {
   background-repeat: no-repeat;
   display: inline-block;
@@ -152,7 +142,6 @@ material-docs-app > guide-viewer {
   height: 24px;
   width: 24px;
 }
-
 .docs-header-background[_ngcontent-c9] {
   overflow: hidden;
 }
@@ -171,6 +160,7 @@ material-docs-app > guide-viewer {
   font-weight: 300;
   line-height: 28px;
   margin: 15px 0 25px;
+  color: #fff;
 }
 .docs-homepage-promo[_ngcontent-c9] {
   align-items: center;
@@ -178,11 +168,24 @@ material-docs-app > guide-viewer {
   flex-direction: column;
   padding: 16px;
 }
-.docs-homepage-promo[_ngcontent-c9] h2[_ngcontent-c9] {
+h2 {
   font-size: 25px;
   font-weight: 400;
   margin: 0 0 16px;
   padding: 0;
+  color: rgba(0, 0, 0, 0.54);
+}
+.docs-homepage-bottom-start ul,
+.docs-homepage-bottom-start a {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.docs-homepage-bottom-start li {
+  line-height: 23px;
+}
+h3 {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 200;
 }
 .docs-homepage-promo[_ngcontent-c9] p[_ngcontent-c9] {
   font-size: 16px;
@@ -197,7 +200,6 @@ material-docs-app > guide-viewer {
   max-width: 800px;
   margin: 60px 0;
 }
-
 .docs-homepage-row[_ngcontent-c9] svg {
   max-width: 300px;
 }
@@ -273,10 +275,8 @@ material-docs-app > guide-viewer {
 
 .mat-elevation-z6 {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
-
 
 .mat-button,
 .mat-icon-button,
@@ -289,7 +289,6 @@ material-docs-app > guide-viewer {
   background: black;
 }
 
-
 .mat-flat-button,
 .mat-raised-button,
 .mat-fab,
@@ -299,15 +298,12 @@ material-docs-app > guide-viewer {
 }
 .mat-raised-button:not([class*="mat-elevation-z"]) {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
-
 
 .docs-app-background {
   background: #fafafa;
 }
-
 
 .docs-footer {
   background: #673ab7;
@@ -322,7 +318,6 @@ material-docs-app > guide-viewer {
   fill: #3e236e;
 }
 
-
 .docs-svg-primary-light-20-fill {
   fill: #845ccb;
 }
@@ -334,7 +329,6 @@ material-docs-app > guide-viewer {
 .docs-svg-primary-light-20-stop-color {
   stop-color: #845ccb;
 }
-
 
 .docs-svg-primary-light-30-stop-color {
   stop-color: #9370d2;
@@ -348,66 +342,28 @@ material-docs-app > guide-viewer {
   fill: #c1ade5;
 }
 
-
 .docs-svg-primary-light-80-fill {
   fill: #e0d6f2;
 }
 
-
 .docs-svg-primary-light-85-fill {
   fill: #e8e0f5;
 }
-
-
-
-
-
-
-
-
-
 body {
   font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
     Arial, "Lucida Grande", sans-serif;
   margin: 0;
 }
-
 h1,
 h2 {
   font-weight: 400;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mat-h1,
 .mat-headline,
 .mat-typography h1 {
   font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mat-button,
 .mat-fab,
 .mat-flat-button,
@@ -419,43 +375,16 @@ h2 {
   font-size: 14px;
   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
 .mat-ripple {
   overflow: hidden;
   position: relative;
 }
-
-
-
-
-
-
-
-
-
 .mat-button,
 .mat-icon-button,
 .mat-stroked-button {
   color: inherit;
   background: 0 0;
 }
-
-
-
-
-
-
-
 .mat-button-focus-overlay {
   background: #000;
 }
@@ -466,41 +395,10 @@ h2 {
   color: rgba(0, 0, 0, 0.87);
   background-color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mat-raised-button:not([class*="mat-elevation-z"]) {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .docs-app-background {
   background: #fafafa;
 }
