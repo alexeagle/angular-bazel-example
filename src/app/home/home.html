@@ -1,25 +1,10 @@
 <h1>Angular Bazel Example</h1>
 
-<h2>
-    Build, test and deploy at scale with the Cloud
-</h2>
+This is an example of building an Angular app at scale.
+It uses <code>BUILD.bazel</code> files to customize the configuration of Bazel.
+This means the application is compiled in many small libraries, giving us incremental builds.
 
-Bazel uses a remote cache of intermediate build artifacts, so even your first build is incremental.
-When Bazel has a lot of build or test work, it can use extra machines on the Cloud to massively parallelize the work.
-Even deployments can be incremental, using Docker layers.
-
-<h2>
-    Works with Angular CLI 
-</h2>
-
-Use the same <code>ng</code> commands you're used to.
-
-<h2>
-    Part of Angular Labs
-</h2>
-
-Still not a stable, supported API, so use Bazel with caution in production applications.
-We expect to promote it to stable in Angular v9.
+Read more about the example on the <a href="https://github.com/angular/angular-bazel-example">GitHub README</a>
 
 <h2>
     Navigating the example
@@ -28,3 +13,4 @@ We expect to promote it to stable in Angular v9.
 This application mimics a developer console for a cloud provider.
 There are ten sections in the left nav, which represent ten different teams that contribute their functionality to the single-page application.
 This is similar to how Google Cloud Console is developed with Bazel.
+

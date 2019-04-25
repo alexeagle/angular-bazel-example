@@ -1,6 +1,5 @@
+# Generated BUILD file, see /tools/generator
 load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
-
-# Generated BUILD file, see /tools/generate.js
 load("@npm_angular_bazel//:index.bzl", "ng_module")
 load("@npm_bazel_karma//:defs.bzl", "ts_web_test_suite")
 load("@npm_bazel_typescript//:defs.bzl", "ts_library")
@@ -16,6 +15,13 @@ sass_binary(
     name = "module1_styles",
     src = "cmp39/cmp39.component.scss",
 )
+
+# We don't import from these, but the generated ngfactory code will
+NG_FACTORY_ADDED_IMPORTS = [
+    "@npm//@angular/cdk",
+    "@npm//@angular/material",
+    "@npm//@angular/forms",
+]
 
 ng_module(
     name = "module1",
@@ -34,7 +40,8 @@ ng_module(
     deps = [
         "@npm//@angular/common",
         "@npm//@angular/core",
-    ],
+        "//src/shared/material",
+    ] + NG_FACTORY_ADDED_IMPORTS,
 )
 
 ts_library(
@@ -49,7 +56,7 @@ ts_library(
         "@npm//@angular/platform-browser-dynamic",
         "@npm//@types/jasmine",
         "@npm//@types/node",
-    ],
+    ] + NG_FACTORY_ADDED_IMPORTS,
 )
 
 ts_web_test_suite(

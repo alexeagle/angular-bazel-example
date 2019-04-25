@@ -108,14 +108,13 @@ ts_devserver(
     # Start from the development version of the main
     entry_module = "angular_bazel_example/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
-    index_html = "index.html",
+    index_html = "//src/example:assets",
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
         "@npm//node_modules/tslib:tslib.js",
         ":rxjs_umd_modules",
         ":require.config.js",
-
         # We are manaully adding a browserify generated named UMD date-fns bundle here that
         # was generated in our package.json postinstall step. This is a temporary work-around
         # to get commonjs modules & npm packages working with ts_devserver. A more ergonomic
@@ -129,6 +128,21 @@ ts_devserver(
     deps = ["//src"],
 )
 
+# This list is auto-updated by /tools/generator
+# Make sure not to rename this variable
+GENERATED_FEATURES = [
+    "src/app/billing/billing.module.ngfactory",
+    "src/app/compute/compute.module.ngfactory",
+    "src/app/datastore/datastore.module.ngfactory",
+    "src/app/functions/functions.module.ngfactory",
+    "src/app/logging/logging.module.ngfactory",
+    "src/app/monitoring/monitoring.module.ngfactory",
+    "src/app/networking/networking.module.ngfactory",
+    "src/app/registry/registry.module.ngfactory",
+    "src/app/storage/storage.module.ngfactory",
+    "src/app/support/support.module.ngfactory",
+]
+
 rollup_bundle(
     name = "bundle",
     # These Angular routes may be lazy-loaded at runtime.
@@ -140,17 +154,7 @@ rollup_bundle(
         "src/app/home/home.ngfactory",
         "src/app/hello-world/hello-world.module.ngfactory",
         "src/app/todos/todos.module.ngfactory",
-        "src/app/billing/billing.module.ngfactory",
-        "src/app/compute/compute.module.ngfactory",
-        "src/app/datastore/datastore.module.ngfactory",
-        "src/app/functions/functions.module.ngfactory",
-        "src/app/logging/logging.module.ngfactory",
-        "src/app/monitoring/monitoring.module.ngfactory",
-        "src/app/networking/networking.module.ngfactory",
-        "src/app/registry/registry.module.ngfactory",
-        "src/app/storage/storage.module.ngfactory",
-        "src/app/support/support.module.ngfactory",
-    ],
+    ] + GENERATED_FEATURES,
     entry_point = "src/main.prod",
     deps = [
         "//src",
@@ -174,7 +178,7 @@ web_package(
     # do not sort
     assets = _ASSETS + [
         # For differential loading, we supply both an ESModule entry point and an es5 entry point
-        # The injector will put two complimentary script tags in the index.html
+        # The injector will put two complimentary script tags in the example.html
         ":bundle.min.js",
         ":bundle.min.es2015.js",
     ],
@@ -184,9 +188,10 @@ web_package(
         # Include polyfills that will be requested by old browsers
         "@npm//node_modules/systemjs:dist/system.js",
         "@npm//node_modules/core-js:client/core.min.js",
+        "index.html",
     ],
     # <script> and <link> tags will be automatically injected into this index.
-    index_html = "index.html",
+    index_html = "//src/example:assets",
 )
 
 history_server(

@@ -1,4 +1,8 @@
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatPaginatorModule, MatSortModule, MatTableModule} from '@angular/material';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import {Cmp38Component} from './cmp38.component';
 
@@ -7,7 +11,19 @@ describe('Cmp38Component', () => {
   let fixture: ComponentFixture<Cmp38Component>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [Cmp38Component]}).compileComponents();
+    TestBed
+        .configureTestingModule({
+          declarations: [Cmp38Component],
+          imports: [
+            NoopAnimationsModule,
+            ReactiveFormsModule,
+            MatTableModule,
+            MatPaginatorModule,
+            MatSortModule,
+          ],
+          schemas: [NO_ERRORS_SCHEMA]
+        })
+        .compileComponents();
   }));
 
   beforeEach(() => {
@@ -16,7 +32,7 @@ describe('Cmp38Component', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should compile', () => {
     expect(component).toBeTruthy();
   });
 });

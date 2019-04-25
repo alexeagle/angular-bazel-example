@@ -33,25 +33,28 @@
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/buildifier": "0.22.0",
         "@bazel/ibazel": "0.10.1",
-        "@bazel/karma": "0.27.10",
+        "@bazel/karma": "0.27.12",
         "@bazel/typescript": "0.27.10",
         "@types/jasmine": "3.3.12",
-        "@types/node": "6.14.4",
+        "@types/node": "6.14.5",
         "browserify": "16.2.3",
         "clang-format": "1.2.4",
         "core-js": "2.6.5",
+        "firebase-tools": "6.7.1",
         "husky": "0.14.3",
         "named-amd": "1.0.0",
         "protractor": "6.0.0",
+        "ts-morph": "1.3.3",
         "typescript": "3.3.3333"
     },
     "scripts": {
         "build": "bazel build //src:bundle",
         "serve": "ibazel run //src:devserver",
+        "deploy": "ng build && firebase deploy",
         "serve-prod": "bazel run //src:prodserver",
         "e2e": "bazel test //e2e:all",
         "test": "bazel test //src/...",
-        "benchmark": "ibazel-benchmark-runner //src:devserver src/hello-world/hello-world.component.ts --url=http://localhost:5432",
+        "benchmark": "ibazel-benchmark-runner //src:devserver src/app/hello-world/hello-world.component.ts --url=http://localhost:5432",
         "postinstall": "ngc -p angular-metadata.tsconfig.json && yarn browserify-date-fns",
         "// browserify-date-fns": "for ts_devserver & ts_web_test_suite, create named UMD bundle of date-fns npm package with AMD name 'date-fns' and global name browserifyDateFns",
         "browserify-date-fns": "browserify -p [ named-amd --name date-fns ] node_modules/date-fns/index.js -s browserifyDateFns -o node_modules/date-fns/date-fns.umd.js",
@@ -60,7 +63,7 @@
         "bazel:lint-fix": "yarn bazel:format --lint=fix",
         "format": "git-clang-format",
         "precommit": "check-clang-format \"yarn format\"",
-        "generate:clean": "rimraf ./src/app/billing ./src/app/compute ./src/app/datastore ./src/app/functions ./src/app/logging ./src/app/monitoring ./src/app/networking ./src/app/registry ./src/app/storage ./src/app/support",
-        "generate": "node tools/generate.js"
+        "generate": "node tools/generator/index.js",
+        "generate:clean": "node tools/generator/index.js --clean"
     }
 }

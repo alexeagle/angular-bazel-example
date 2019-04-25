@@ -1,4 +1,8 @@
+import {LayoutModule} from '@angular/cdk/layout';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {MatButtonModule, MatCardModule, MatGridListModule, MatIconModule, MatMenuModule,} from '@angular/material';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import {Cmp14Component} from './cmp14.component';
 
@@ -7,7 +11,21 @@ describe('Cmp14Component', () => {
   let fixture: ComponentFixture<Cmp14Component>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [Cmp14Component]}).compileComponents();
+    TestBed
+        .configureTestingModule({
+          declarations: [Cmp14Component],
+          imports: [
+            NoopAnimationsModule,
+            LayoutModule,
+            MatButtonModule,
+            MatCardModule,
+            MatGridListModule,
+            MatIconModule,
+            MatMenuModule,
+          ],
+          schemas: [NO_ERRORS_SCHEMA]
+        })
+        .compileComponents();
   }));
 
   beforeEach(() => {
@@ -16,7 +34,7 @@ describe('Cmp14Component', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should compile', () => {
     expect(component).toBeTruthy();
   });
 });

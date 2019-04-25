@@ -6,12 +6,8 @@
 
 This is part of the ABC project. The overall goal is to make it possible to
 develop Angular applications the same way we do at Google.
-See http://g.co/ng/abc for an overview.
 
-You can read the documentation in the wiki of this repository to understand how
-this works. There is also various documentation linked from https://docs.bazel.build/versions/master/bazel-and-javascript.html
-
-Follow https://github.com/angular/angular/issues/19058 for updates.
+Learn more about Bazel and Angular at http://bazel.angular.io
 
 ## Guide to the example
 
@@ -128,6 +124,13 @@ setup a local `node_modules` folder for editor and tooling support.
 
 ## Deployment
 
+### Firebase
+
+We use the standard firebase deploy command.
+
+Run `yarn deploy` to release changes to bazel.angular.io.
+
+### Kubernetes Engine
 We use Bazel's docker support to package up our production server for deployment.
 Each time the app changes, we'll get a slim new docker layer with just the modified files, keeping the round-trip for deployment incremental and fast.
 This example is configured to run on Google Kubernetes Engine, so we can have an elastic pool of backend machines behind a load balancer.

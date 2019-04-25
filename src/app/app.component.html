@@ -1,6 +1,8 @@
 <nav>
   <mat-toolbar class="mat-secondary">
-    <p class="show-small"><button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button></p>
+    <p class="show-small"><button mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button></p>
     <a mat-button href="http://angular.io" class="hide-small">
       <img class="nav-logo" src="/assets/angular-logo-with-text.svg">
     </a>
@@ -9,7 +11,7 @@
       <img class="nav-logo" src="/assets/bazel-navbar.svg">
     </a>
     <span class="flex-spacer"></span>
-    <a mat-button href="https://docs.bazel.build/versions/master/bazel-and-javascript.html">
+    <a mat-button href="https://next.angular.io/guide/bazel">
       Documentation
     </a>
     <a href="https://github.com/angular/angular-bazel-example">
@@ -22,6 +24,18 @@
   <mat-drawer #drawer opened mode="side">
     <mat-nav-list>
       <a mat-list-item routerLink="/"> Home </a>
+      <a mat-list-item routerLink="/hello"> Hello World </a>
+      <a mat-list-item routerLink="/todos"> Todos </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <a mat-list-item routerLink="/billing"><mat-icon>credit_card</mat-icon> Billing </a>
       <a mat-list-item routerLink="/compute"><mat-icon>memory</mat-icon> Compute </a>
       <a mat-list-item routerLink="/datastore"><mat-icon>view_agenda</mat-icon> Datastore </a>
@@ -32,8 +46,6 @@
       <a mat-list-item routerLink="/registry"><mat-icon>ballot</mat-icon> Registry </a>
       <a mat-list-item routerLink="/storage"><mat-icon>folder</mat-icon> Storage </a>
       <a mat-list-item routerLink="/support"><mat-icon>headset_mic</mat-icon> Support </a>
-      <a mat-list-item routerLink="/hello"> Hello World </a>
-      <a mat-list-item routerLink="/todos"> Todos </a>
     </mat-nav-list>
   </mat-drawer>
 
