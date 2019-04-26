@@ -2,3 +2,5 @@ node_modules
 bazel-out
 dist
 .firebase
+.DS_Store
+.bazelrc.user

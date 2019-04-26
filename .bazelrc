@@ -29,3 +29,39 @@ test --nolegacy_external_runfiles
 build --incompatible_strict_action_env
 run --incompatible_strict_action_env
 test --incompatible_strict_action_env
+
+
+###############################
+# Remote Build Execution support
+# Turn on these settings with
+#  --config=remote
+###############################
+
+# Load default settings for Remote Build Execution
+# When updating, the URLs of bazel_toolchains in packages/bazel/package.bzl
+# may also need to be updated (see https://github.com/angular/angular/pull/27935)
+import %workspace%/third_party/github.com/bazelbuild/bazel-toolchains/bazelrc/bazel-0.24.0.bazelrc
+
+# Point to our custom execution platform; see tools/BUILD.bazel
+build:remote --extra_execution_platforms=//tools:rbe_ubuntu1604-angular
+build:remote --host_platform=//tools:rbe_ubuntu1604-angular
+build:remote --platforms=//tools:rbe_ubuntu1604-angular
+
+# Remote instance.
+build:remote --remote_instance_name=projects/rbe-shared-demo/instances/default_instance
+
+# Schedule actions both locally and remote, take the faster one
+# See https://blog.bazel.build/2019/02/01/dynamic-spawn-scheduler.html
+# NB: this setting is experimental and can cause obscure build failures.
+# The Bazel team does not recommend using this in all projects.
+build:remote --experimental_spawn_scheduler
+
+##################################################
+# Load any settings specific to the current user.
+##################################################
+
+# Needs to be last statement in this
+# config, as the user configuration should be able to overwrite flags from this file.
+# To use Remote Build Execution, this file should contain a line like
+# build --google_credentials=[path to the .json credentials file]
+try-import .bazelrc.user
