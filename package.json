@@ -29,7 +29,7 @@
         "@angular/cli": "8.0.0-rc.0",
         "@angular/compiler": "8.0.0-rc.0",
         "@angular/compiler-cli": "8.0.0-rc.0",
-        "@bazel/bazel": "0.24.1",
+        "@bazel/bazel": "0.25.1",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/buildifier": "0.22.0",
         "@bazel/ibazel": "0.10.1",
