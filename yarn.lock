@@ -2,32 +2,13 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.800.0-rc.0":
+"@angular-devkit/architect@0.800.0-rc.0", "@angular-devkit/architect@^0.800.0-beta.15":
   version "0.800.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.800.0-rc.0.tgz#76b5722606b25061b18bde219740e6f1f1b2de33"
   integrity sha512-oXnXky8D79KLD/rTY9Xsh0UaqJ05USinxMxEy8nE5NP8YB9q9N2SrSmrEZrWZFtDP4fgcnU9ravWoIkNg+o4WA==
   dependencies:
     "@angular-devkit/core" "8.0.0-rc.0"
     rxjs "6.4.0"
-
-"@angular-devkit/architect@^0.800.0-beta.15":
-  version "0.800.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.800.0-rc.0.tgz#76b5722606b25061b18bde219740e6f1f1b2de33"
-  integrity sha512-oXnXky8D79KLD/rTY9Xsh0UaqJ05USinxMxEy8nE5NP8YB9q9N2SrSmrEZrWZFtDP4fgcnU9ravWoIkNg+o4WA==
-  dependencies:
-    "@angular-devkit/core" "8.0.0-rc.0"
-    rxjs "6.4.0"
-
-"@angular-devkit/core@8.0.0-rc.0":
-  version "8.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.0.0-rc.0.tgz#88002abac814f133aa14d8b2499fe02f6effc9d8"
-  integrity sha512-7ZCyhpihDnZJ6dMyF/Ux1qGFmTo98KeX6D6YsFcRpFCTirJeLqFmRslwNO9weydgITbvvfiKHsGrkRinJTy2ZQ==
-  dependencies:
-    ajv "6.10.0"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.2"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.0.0-beta.18":
   version "8.0.0-beta.18"
@@ -51,14 +32,6 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.0.0-rc.0":
-  version "8.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-rc.0.tgz#c3cfdaf81bd1cf32f85527f9d831e3e8f3226d62"
-  integrity sha512-QbXzDI7TgGoD4bU8kB3eJ67LoxUvZA9jdo/GQCtHlvvVIrZhazODya5SOTBxgz1i4pGmzYSpygEj/CPSeFxQdw==
-  dependencies:
-    "@angular-devkit/core" "8.0.0-rc.0"
-    rxjs "6.4.0"
-
 "@angular-devkit/schematics@8.0.0-beta.18":
   version "8.0.0-beta.18"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-beta.18.tgz#97dece6eaddd331516a94da985f33add21b76f5c"
@@ -67,7 +40,7 @@
     "@angular-devkit/core" "8.0.0-beta.18"
     rxjs "6.4.0"
 
-"@angular-devkit/schematics@^8.0.0-beta.15":
+"@angular-devkit/schematics@8.0.0-rc.0", "@angular-devkit/schematics@^8.0.0-beta.15":
   version "8.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-rc.0.tgz#c3cfdaf81bd1cf32f85527f9d831e3e8f3226d62"
   integrity sha512-QbXzDI7TgGoD4bU8kB3eJ67LoxUvZA9jdo/GQCtHlvvVIrZhazODya5SOTBxgz1i4pGmzYSpygEj/CPSeFxQdw==
@@ -263,10 +236,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
 
-"@bazel/karma@0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.28.0.tgz#b66db9bfd22b558fb3860c8d668f08362ddfe916"
-  integrity sha512-ig8b90q9s5R/Uwbx76u4t2htWCfkGf6krKYXsaK9qrfHV/5kELsYcNEkQggyYzJmYOqfjJrMAsndO9W+goFhDw==
+"@bazel/karma@0.29.0":
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.29.0.tgz#bcb79750ecec3884136e584b36e3cd3b610455a5"
+  integrity sha512-dSN7iBAz0srGkJxAP7NAyWVdCWoUHBxlGL7YxHObV3kDTwWUDKWKcEwuOC7MTMSQtYM4WcVVvfCO3HhXKUxhPg==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
