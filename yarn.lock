@@ -2,32 +2,13 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.800.0-rc.0":
+"@angular-devkit/architect@0.800.0-rc.0", "@angular-devkit/architect@^0.800.0-beta.15":
   version "0.800.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.800.0-rc.0.tgz#76b5722606b25061b18bde219740e6f1f1b2de33"
   integrity sha512-oXnXky8D79KLD/rTY9Xsh0UaqJ05USinxMxEy8nE5NP8YB9q9N2SrSmrEZrWZFtDP4fgcnU9ravWoIkNg+o4WA==
   dependencies:
     "@angular-devkit/core" "8.0.0-rc.0"
     rxjs "6.4.0"
-
-"@angular-devkit/architect@^0.800.0-beta.15":
-  version "0.800.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.800.0-rc.0.tgz#76b5722606b25061b18bde219740e6f1f1b2de33"
-  integrity sha512-oXnXky8D79KLD/rTY9Xsh0UaqJ05USinxMxEy8nE5NP8YB9q9N2SrSmrEZrWZFtDP4fgcnU9ravWoIkNg+o4WA==
-  dependencies:
-    "@angular-devkit/core" "8.0.0-rc.0"
-    rxjs "6.4.0"
-
-"@angular-devkit/core@8.0.0-rc.0":
-  version "8.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.0.0-rc.0.tgz#88002abac814f133aa14d8b2499fe02f6effc9d8"
-  integrity sha512-7ZCyhpihDnZJ6dMyF/Ux1qGFmTo98KeX6D6YsFcRpFCTirJeLqFmRslwNO9weydgITbvvfiKHsGrkRinJTy2ZQ==
-  dependencies:
-    ajv "6.10.0"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.2"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.0.0-beta.18":
   version "8.0.0-beta.18"
@@ -51,14 +32,6 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.0.0-rc.0":
-  version "8.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-rc.0.tgz#c3cfdaf81bd1cf32f85527f9d831e3e8f3226d62"
-  integrity sha512-QbXzDI7TgGoD4bU8kB3eJ67LoxUvZA9jdo/GQCtHlvvVIrZhazODya5SOTBxgz1i4pGmzYSpygEj/CPSeFxQdw==
-  dependencies:
-    "@angular-devkit/core" "8.0.0-rc.0"
-    rxjs "6.4.0"
-
 "@angular-devkit/schematics@8.0.0-beta.18":
   version "8.0.0-beta.18"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-beta.18.tgz#97dece6eaddd331516a94da985f33add21b76f5c"
@@ -67,7 +40,7 @@
     "@angular-devkit/core" "8.0.0-beta.18"
     rxjs "6.4.0"
 
-"@angular-devkit/schematics@^8.0.0-beta.15":
+"@angular-devkit/schematics@8.0.0-rc.0", "@angular-devkit/schematics@^8.0.0-beta.15":
   version "8.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.0.0-rc.0.tgz#c3cfdaf81bd1cf32f85527f9d831e3e8f3226d62"
   integrity sha512-QbXzDI7TgGoD4bU8kB3eJ67LoxUvZA9jdo/GQCtHlvvVIrZhazODya5SOTBxgz1i4pGmzYSpygEj/CPSeFxQdw==
@@ -280,10 +253,10 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.28.0.tgz#fdc9ca63c097c8de6aa8c3e81b3dd870b5605791"
-  integrity sha512-sGi8+pRuPDe7bmK1cUmHfN/3uxHHpJTX9S3edq75pr6MytORIQZBxjSu9aRCgposIe1dPFTGt4B7TOZT8Ln+zw==
+"@bazel/typescript@0.29.0":
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.29.0.tgz#d276afe034f37b5f35ee1369c99dc33c637fc9f6"
+  integrity sha512-Dp5ucrE1vXTORGiwEi6Ur4dlICpLsmZ1dscsEQT4ywF7xTT0/NmIG0ecBghiCFPFQTxt1D05TR3SH06rPtTAew==
   dependencies:
     protobufjs "6.8.8"
     semver "5.6.0"
