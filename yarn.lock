@@ -236,10 +236,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
 
-"@bazel/karma@0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.28.0.tgz#b66db9bfd22b558fb3860c8d668f08362ddfe916"
-  integrity sha512-ig8b90q9s5R/Uwbx76u4t2htWCfkGf6krKYXsaK9qrfHV/5kELsYcNEkQggyYzJmYOqfjJrMAsndO9W+goFhDw==
+"@bazel/karma@0.29.0":
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.29.0.tgz#bcb79750ecec3884136e584b36e3cd3b610455a5"
+  integrity sha512-dSN7iBAz0srGkJxAP7NAyWVdCWoUHBxlGL7YxHObV3kDTwWUDKWKcEwuOC7MTMSQtYM4WcVVvfCO3HhXKUxhPg==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
@@ -253,10 +253,10 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.28.0.tgz#fdc9ca63c097c8de6aa8c3e81b3dd870b5605791"
-  integrity sha512-sGi8+pRuPDe7bmK1cUmHfN/3uxHHpJTX9S3edq75pr6MytORIQZBxjSu9aRCgposIe1dPFTGt4B7TOZT8Ln+zw==
+"@bazel/typescript@0.29.0":
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.29.0.tgz#d276afe034f37b5f35ee1369c99dc33c637fc9f6"
+  integrity sha512-Dp5ucrE1vXTORGiwEi6Ur4dlICpLsmZ1dscsEQT4ywF7xTT0/NmIG0ecBghiCFPFQTxt1D05TR3SH06rPtTAew==
   dependencies:
     protobufjs "6.8.8"
     semver "5.6.0"
@@ -6061,6 +6061,13 @@ rxjs@6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.4.0.tgz#f3bb0fe7bda7fb69deac0c16f17b50b0b8790504"
   integrity sha512-Z9Yfa11F6B9Sg/BK9MnqnQ+aQYicPLtilXBp2yUtDt2JRCE0h26d33EnfO3ZxoNxG0T92OUucP3Ct7cpfkdFfw==
+  dependencies:
+    tslib "^1.9.0"
+
+rxjs@6.5.2:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.2.tgz#2e35ce815cd46d84d02a209fb4e5921e051dbec7"
+  integrity sha512-HUb7j3kvb7p7eCUHE3FqjoDsC1xfZQ4AHFWfTKSpZ+sAhhz5X1WX0ZuUqWbzB2QhSLp3DoLUG+hMdEDKqWo2Zg==
   dependencies:
     tslib "^1.9.0"
 
