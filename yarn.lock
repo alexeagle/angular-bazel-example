@@ -6052,10 +6052,10 @@ symbol-observable@1.2.0:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
-systemjs@0.21.6:
-  version "0.21.6"
-  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.21.6.tgz#9d15e79d9f60abbac23f0d179f887ec01f260a1b"
-  integrity sha512-R+5S9eV9vcQgWOoS4D87joZ4xkFJHb19ZsyKY07D1+VBDE9bwYcU+KXE0r5XlDA8mFoJGyuWDbfrNoh90JsA8g==
+systemjs@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-3.1.6.tgz#0a13f45d2c3f7509824be46033a61115eda1903d"
+  integrity sha512-cXin4Z7FWf/eANmvuR5uE8qfPqMlkjyNZbayO/Mf3+AvSOegYY/3myiWgioKLOWUeB16if3VYqdk7HXXmgOL8Q==
 
 tar-stream@^1.5.0:
   version "1.6.2"
