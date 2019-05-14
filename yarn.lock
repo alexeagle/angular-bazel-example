@@ -226,10 +226,10 @@
     "@bazel/buildifier-darwin_x64" "0.22.0"
     "@bazel/buildifier-linux_x64" "0.22.0"
 
-"@bazel/ibazel@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.10.1.tgz#cebcc5cf045fd0e7957e2c491b60094fce28667a"
-  integrity sha512-voH62lpUySr7ukobBqcqYYDWwIAPUpLURE/IFpejKZuomiyR3k/CqJYhWOcWmMwYTNUnONri27PF+j6BK/J2Gw==
+"@bazel/ibazel@0.10.3":
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.10.3.tgz#2e2b8a1d3e885946eac41db2b1aa6801fb319887"
+  integrity sha512-v1nXbMTHVlMM4z4uWp6XiRoHAyUlYggF1SOboLLWRp0+D22kWixqArWqnozLw2mOtnxr97BdLjluWiho6A8Hjg==
 
 "@bazel/ibazel@0.3.1":
   version "0.3.1"
