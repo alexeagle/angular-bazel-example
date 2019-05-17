@@ -91,11 +91,11 @@ sass_repositories()
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "67335b3563d9b67dc2550b8f27cc689b64fadac491e69ce78763d9ba894cc5cc",
-    strip_prefix = "bazel-toolchains-cddc376d428ada2927ad359211c3e356bd9c9fbb",
+    sha256 = "e3ebc3258225eba7b8736582d3c6b4b83856a69db9aab57abeebc56456dcaa0b",
+    strip_prefix = "bazel-toolchains-c76437eb0ace646500358623d8f32a5103c220f5",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/cddc376d428ada2927ad359211c3e356bd9c9fbb.tar.gz",
-        "https://github.com/bazelbuild/bazel-toolchains/archive/cddc376d428ada2927ad359211c3e356bd9c9fbb.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/c76437eb0ace646500358623d8f32a5103c220f5.tar.gz",
+        "https://github.com/bazelbuild/bazel-toolchains/archive/c76437eb0ace646500358623d8f32a5103c220f5.tar.gz",
     ],
 )
 
