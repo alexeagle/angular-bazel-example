@@ -7,9 +7,9 @@
 # imports also make sense when referencing the published package.
 workspace(name = "angular_bazel_example")
 
-# This rule is built-into Bazel but we need to load it first to download more rules
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+# These rules are built-into Bazel but we need to load them first to download more rules
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # Fetch rules_nodejs so we can install our npm dependencies
 http_archive(
