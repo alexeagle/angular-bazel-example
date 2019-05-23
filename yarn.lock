@@ -242,10 +242,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
 
-"@bazel/karma@0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.29.0.tgz#bcb79750ecec3884136e584b36e3cd3b610455a5"
-  integrity sha512-dSN7iBAz0srGkJxAP7NAyWVdCWoUHBxlGL7YxHObV3kDTwWUDKWKcEwuOC7MTMSQtYM4WcVVvfCO3HhXKUxhPg==
+"@bazel/karma@0.30.1":
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.30.1.tgz#5ef08da0abfa5b7e8536a7242a3fc60bf60ed143"
+  integrity sha512-nDy/Hct/XO1XY8zQeNBVBbff3F5XwRf/TTIM21VksqN0bwn6eVkAm6Pwc96eB/FQ75Xq60vib7v/K5MYjs3EGg==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
