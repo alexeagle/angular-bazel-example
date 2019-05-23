@@ -259,10 +259,10 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.29.0.tgz#d276afe034f37b5f35ee1369c99dc33c637fc9f6"
-  integrity sha512-Dp5ucrE1vXTORGiwEi6Ur4dlICpLsmZ1dscsEQT4ywF7xTT0/NmIG0ecBghiCFPFQTxt1D05TR3SH06rPtTAew==
+"@bazel/typescript@0.30.1":
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.30.1.tgz#58cf290a366418d713b29123d9c337da6500d764"
+  integrity sha512-tljA8Nv0of08L+I3cipJ096ni3548Qb4ZJS3bAV/pxPsEub4MB48TlASkWjQRp46oPUS3TrAes2kRQCF+kCxFg==
   dependencies:
     protobufjs "6.8.8"
     semver "5.6.0"
