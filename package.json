@@ -39,7 +39,7 @@
         "@types/node": "6.14.6",
         "clang-format": "1.2.4",
         "core-js": "2.6.8",
-        "firebase-tools": "6.10.0",
+        "firebase-tools": "6.11.0",
         "husky": "0.14.3",
         "protractor": "6.0.0",
         "ts-morph": "2.1.2",
