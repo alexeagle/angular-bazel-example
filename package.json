@@ -40,7 +40,7 @@
         "clang-format": "1.2.4",
         "core-js": "2.6.8",
         "firebase-tools": "7.0.0",
-        "husky": "0.14.3",
+        "husky": "3.0.0",
         "protractor": "6.0.0",
         "ts-morph": "2.1.2",
         "typescript": "3.4.5"
