@@ -43,7 +43,7 @@
         "firebase-tools": "7.0.0",
         "husky": "0.14.3",
         "protractor": "6.0.0",
-        "ts-morph": "2.1.2",
+        "ts-morph": "3.1.0",
         "typescript": "3.4.5"
     },
     "scripts": {
