@@ -22,7 +22,7 @@
         "rxjs": "6.5.2",
         "systemjs": "0.21.6",
         "tslib": "1.10.0",
-        "zone.js": "0.10.1"
+        "zone.js": "0.10.2"
     },
     "devDependencies": {
         "@angular/bazel": "8.1.3",
