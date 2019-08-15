@@ -66,12 +66,6 @@ filegroup(
     ],
 )
 
-# We always strip these paths off the front of any assets we serve
-_ROOT_DIRS = [
-    "npm/node_modules/zone.js/dist",
-    "npm/node_modules/@angular/material/prebuilt-themes",
-]
-
 # Files that we serve in both development and production
 _ASSETS = [
     # This label references an output of the "styles" sass_binary above.
@@ -94,8 +88,6 @@ _ASSETS = [
 # This scales really well for massive codebases.
 ts_devserver(
     name = "devserver",
-    # serve these files rooted at /
-    additional_root_paths = _ROOT_DIRS,
     # Serve these files but don't inject tags for them into the index file
     # This might be because we only want to lazy-load these scripts on-demand,
     # or because they aren't compatible with Require.js so we must use a runtime
@@ -168,8 +160,9 @@ rollup_bundle(
 
 web_package(
     name = "prodapp",
-    additional_root_paths = _ROOT_DIRS + [
-        # In production mode we also serve some polyfills
+    # In production mode we serve some polyfills with script tags that have hard-coded paths in the index.html
+    # so we must serve them at that path, by stripping a prefix
+    additional_root_paths = [
         "npm/node_modules/core-js/client",
         "npm/node_modules/systemjs/dist",
     ],
