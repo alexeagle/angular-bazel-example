@@ -254,29 +254,29 @@
     puppeteer "^0.13.0"
     tempy "^0.2.1"
 
-"@bazel/buildifier-darwin_x64@0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@bazel/buildifier-darwin_x64/-/buildifier-darwin_x64-0.26.0.tgz#0e4f5066750f7984689857e332f93368e0d782dd"
-  integrity sha512-yvlHuaP2FIMJ4Z4Ucs/R1wgwkDjhDkwvGD1eyhy9Qblqu7Ypgxtv2wz8dygrxDJVxhk3Kiwzlrp3otq6OYjv5A==
+"@bazel/buildifier-darwin_x64@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@bazel/buildifier-darwin_x64/-/buildifier-darwin_x64-0.28.0.tgz#bc8c4312596d4cf321062ae4e3f2115be453fef2"
+  integrity sha512-bvWz4W3FzWFqUr65Z/IrrhUuzHzvFnYB3QpPXUlUOI1sx43Ge3pMlndEwhMBOPM2SoRi5Z5rxG0X9NuvuXWw8w==
 
-"@bazel/buildifier-linux_x64@0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@bazel/buildifier-linux_x64/-/buildifier-linux_x64-0.26.0.tgz#05020641f17441145056821ec33a2c667e253a3f"
-  integrity sha512-4+ZGEVMQdJr39My2eH6GmQrBIQfuw/DWO3Vwpy5vS1p61EvV0a5+jaukRelA3p//FD0j2cAKaBvwZdsijtDsZw==
+"@bazel/buildifier-linux_x64@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@bazel/buildifier-linux_x64/-/buildifier-linux_x64-0.28.0.tgz#d09dedcfcd1677ddec8fe17fa7e39612dab86b41"
+  integrity sha512-KVXUcT2yZnKcRf4L9qzlYtEHw9SdO4/O6/cyyyybYPzpS3CJ2yIFm6VabXBTXsUp3LXfWc3EE62f8ieHoRJJnw==
 
-"@bazel/buildifier-win32_x64@0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@bazel/buildifier-win32_x64/-/buildifier-win32_x64-0.26.0.tgz#51d983d36fd41f59063347e027487a447e4ea83e"
-  integrity sha512-S3QvjopF6cQ0rMv8zxi/SWfRBtA+oBGiTPcfpn1wJZa8Q21PdOcjH9ZgPJKpIV53x6sJ8XBVs7HSW44dPrwxQA==
+"@bazel/buildifier-win32_x64@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@bazel/buildifier-win32_x64/-/buildifier-win32_x64-0.28.0.tgz#1d2c239753a389f48669a194bf16477c1f15befd"
+  integrity sha512-6E9QZPVzMolcQQKDi5tRJjAFylgzBWbV01/3RiFZb1x4ITZJ74h/FuTRhdYAUPA3n59ge2F3sPtf9Q97RxJU7g==
 
-"@bazel/buildifier@0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@bazel/buildifier/-/buildifier-0.26.0.tgz#65af3851f9ebe8b9ac651185d051b1a155012dbb"
-  integrity sha512-PVzkCOYhjlgcRCXUO31dy/GmtjDWzeTyVmPCFc4pxTFBvlrG7qkVlUW3DCIbBI5neTes0pY8mju837UBdK0OFQ==
+"@bazel/buildifier@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@bazel/buildifier/-/buildifier-0.28.0.tgz#cce8a5b67520f27b611c149bf334b5f86e5e5aa7"
+  integrity sha512-g9F7rEQayXU4SHgbOYhDLk8AzDMhqFNnZVb/xVDeCkbg20MbCGIZDj9pN8NBnowB7OJF4VsvnSV0FB4BVGfpxQ==
   optionalDependencies:
-    "@bazel/buildifier-darwin_x64" "0.26.0"
-    "@bazel/buildifier-linux_x64" "0.26.0"
-    "@bazel/buildifier-win32_x64" "0.26.0"
+    "@bazel/buildifier-darwin_x64" "0.28.0"
+    "@bazel/buildifier-linux_x64" "0.28.0"
+    "@bazel/buildifier-win32_x64" "0.28.0"
 
 "@bazel/hide-bazel-files@latest":
   version "0.32.2"
@@ -293,10 +293,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
 
-"@bazel/karma@~0.34.0":
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.34.0.tgz#ee468501a408244a2c1844b48ca5a938874d9444"
-  integrity sha512-9EziieE3Zkf7D5tBuX4rO+hhpI4ypNAWReiO/fykjj5oYpLYhhhGGUyFQ8PCIfduPcGZooCTMsctmwZJUb3rRA==
+"@bazel/karma@~0.36.0":
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.36.1.tgz#3d6e5e8772d2d2799d0b301020c1483ed3fe5de1"
+  integrity sha512-2zSW12BBJEqV1QYhPiwfTmObKCeyq3Gdox1b+2eYbyNw2HBlCHhWJs0FquGo63LLBn9XZhhk2H2IQmwhUOhx+w==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
@@ -310,17 +310,17 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/protractor@~0.34.0":
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/@bazel/protractor/-/protractor-0.34.0.tgz#af166306518bf1319e8ca255f798712c8714b5e9"
-  integrity sha512-U6O8hRlerkQ/WfnEVct1yipVQr5epdYaLiOW1eLpmiRMM4RuMhIpIyKkpum5xqFlYP5kwqwje8BS8NHvBfvZnQ==
+"@bazel/protractor@~0.36.0":
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/@bazel/protractor/-/protractor-0.36.1.tgz#7d6dc95deeeb1e79daff3450815cce86067dc067"
+  integrity sha512-mlsKTTChaUKdqkeNTZ5Ny3PDFI7aul7j6IGYozQUaAopY7qoCMEiOUnwYNYYaf/iKJlcIhQLf7HQwGAq36NTsQ==
   dependencies:
     protractor "^5.4.2"
 
-"@bazel/typescript@~0.34.0":
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.34.0.tgz#ca0fdf15343a930fc1418dbbf7d6cae49e6bc89b"
-  integrity sha512-GXVSADXdbPyWLskIYAzQsBB1LhZgWF5+M6WCQGOvRWjZfXgRP5QDG5pKJavRGzVd6ofigLPA1xT6Vc7dUEDNtg==
+"@bazel/typescript@~0.36.0":
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.36.1.tgz#de7994ed8eec90e0593525f62060a302fcf49ef1"
+  integrity sha512-TvItSk/aGakCmbrxTnbydKxq7bfYzMKqk9tNwHCzC8KqtTTyNuGTHisjqixw8G6jeSrms6vIkfH9YpYw9OHzRQ==
   dependencies:
     protobufjs "6.8.8"
     semver "5.6.0"
